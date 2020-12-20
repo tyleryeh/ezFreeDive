@@ -1,0 +1,6 @@
+framework module Pods_ezFreeDiveTrainer_2 {
+  umbrella header "Pods-ezFreeDiveTrainer_2-umbrella.h"
+
+  export *
+  module * { export * }
+}
