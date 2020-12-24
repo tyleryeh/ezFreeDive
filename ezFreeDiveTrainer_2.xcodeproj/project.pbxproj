@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0A61AA2591E3690006BFE9 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */; };
+		2F0A61AE2591E3880006BFE9 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */; };
+		2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */; };
+		2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */; };
+		2F0A61BD25920E340006BFE9 /* TrainingModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */; };
 		2F435DCA258C4A8B00AB02B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DC9258C4A8B00AB02B8 /* AppDelegate.swift */; };
 		2F435DCC258C4A8B00AB02B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DCB258C4A8B00AB02B8 /* SceneDelegate.swift */; };
 		2F435DCE258C4A8B00AB02B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DCD258C4A8B00AB02B8 /* ViewController.swift */; };
@@ -22,6 +27,11 @@
 
 /* Begin PBXFileReference section */
 		117AB83AEA8FAE734314CB2E /* Pods-ezFreeDiveTrainer_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ezFreeDiveTrainer_2.debug.xcconfig"; path = "Target Support Files/Pods-ezFreeDiveTrainer_2/Pods-ezFreeDiveTrainer_2.debug.xcconfig"; sourceTree = "<group>"; };
+		2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeSelectViewController.swift; sourceTree = "<group>"; };
+		2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeTableViewCell.swift; sourceTree = "<group>"; };
 		2F435DC6258C4A8B00AB02B8 /* ezFreeDiveTrainer_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ezFreeDiveTrainer_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F435DC9258C4A8B00AB02B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F435DCB258C4A8B00AB02B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +68,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2F0A61A82591E3440006BFE9 /* TabViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */,
+				2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */,
+				2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */,
+			);
+			name = TabViewControllers;
+			sourceTree = "<group>";
+		};
+		2F0A61B72592033F0006BFE9 /* TrainingControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */,
+				2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */,
+			);
+			name = TrainingControllers;
+			sourceTree = "<group>";
+		};
 		2F435DBD258C4A8B00AB02B8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				2F435DCB258C4A8B00AB02B8 /* SceneDelegate.swift */,
 				2F435DCD258C4A8B00AB02B8 /* ViewController.swift */,
 				2F435DF2258C5CF100AB02B8 /* orgbundID */,
+				2F0A61B72592033F0006BFE9 /* TrainingControllers */,
+				2F0A61A82591E3440006BFE9 /* TabViewControllers */,
 				2F435DEE258C54AF00AB02B8 /* LogIn */,
 				2F435DCF258C4A8B00AB02B8 /* Main.storyboard */,
 				2F435DD2258C4A8D00AB02B8 /* Assets.xcassets */,
@@ -264,9 +295,14 @@
 				2F435DCE258C4A8B00AB02B8 /* ViewController.swift in Sources */,
 				2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */,
 				2F435DCA258C4A8B00AB02B8 /* AppDelegate.swift in Sources */,
+				2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */,
 				2F435DE8258C541B00AB02B8 /* GDriveManager.swift in Sources */,
+				2F0A61AE2591E3880006BFE9 /* DiaryViewController.swift in Sources */,
 				2F435DEB258C548200AB02B8 /* LogInViewController.swift in Sources */,
 				2F435DCC258C4A8B00AB02B8 /* SceneDelegate.swift in Sources */,
+				2F0A61AA2591E3690006BFE9 /* TrainingViewController.swift in Sources */,
+				2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */,
+				2F0A61BD25920E340006BFE9 /* TrainingModeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
