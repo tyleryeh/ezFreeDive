@@ -19,18 +19,19 @@ class TrainingModeSelectViewController: UIViewController {
         myTrainingModeTableView.separatorStyle = .none
         
     }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let identifier = segue.identifier {
+//            switch identifier {
+//            case "timetimeSegue":
+//                let vc = segue.destination as! TimeTimeViewController
+//            default:
+//                break
+//            }
+//        }
+//    }
+    
 }
 
 extension TrainingModeSelectViewController: UITableViewDelegate {
@@ -44,9 +45,6 @@ extension TrainingModeSelectViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TrainingModeTableViewCell
-//        cell.modeTital.text = "靜態閉氣"
-//        cell.modeDescryption.text = "6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666"
-//        cell.modeImageView.image = UIImage(named: "salutation")
         
         switch indexPath.row {
         case 0:
@@ -67,14 +65,40 @@ extension TrainingModeSelectViewController: UITableViewDataSource {
             cell.modeImageView.image = UIImage(named: "salutation")
             
         default:
-            cell.modeTital.text = "TBD"
-            cell.modeDescryption.text = "TBD"
-            cell.modeImageView.image = UIImage(named: "salutation")
+            break
         }
-        
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0: reduceTime()
+        case 1: reduceTimeBreath()
+        case 2: reduceStep()
+        case 3: reduceStepBreath()
+        default: break
+        }
+    }
+    func reduceTime() {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "ReduceTime") {
+            show(controller, sender: nil)
+        }
+    }
+    func reduceTimeBreath() {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "ReduceTimeBreath") {
+            show(controller, sender: nil)
+        }
+    }
+    func reduceStep() {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "ReduceStep") {
+            show(controller, sender: nil)
+        }
+    }
+    func reduceStepBreath() {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "ReduceStepBreath") {
+            show(controller, sender: nil)
+        }
+    }
     
 }

@@ -11,4 +11,5 @@ pod "GoogleSignIn"
 pod "FBSDKCoreKit/Swift"
 pod "FBSDKLoginKit"
 pod "FBSDKShareKit"
+pod 'UICircularProgressRing'
 end

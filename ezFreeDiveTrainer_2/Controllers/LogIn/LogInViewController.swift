@@ -82,9 +82,6 @@ class LogInViewController: UIViewController {
         }
     }
     
-    
-    
-    
     @IBAction func googleSignBtn(_ sender: Any) {
         guard let canAuthorize = googleSignIn?.currentUser?.authentication?.fetcherAuthorizer()?.canAuthorize else {
             launchSignIn()

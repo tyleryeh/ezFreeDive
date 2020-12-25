@@ -37,6 +37,7 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - GTMSessionFetcher/Full (1.5.0):
     - GTMSessionFetcher/Core (= 1.5.0)
+  - UICircularProgressRing (7.0.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit/Swift
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - FBSDKShareKit
   - GoogleAPIClientForREST/Drive
   - GoogleSignIn
+  - UICircularProgressRing
 
 SPEC REPOS:
   trunk:
@@ -55,6 +57,7 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
@@ -65,7 +68,8 @@ SPEC CHECKSUMS:
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
 
-PODFILE CHECKSUM: 3dea57423f12e75b5c87d101725978ab596aac55
+PODFILE CHECKSUM: da50a16cc95d5b1a8df90b2047648f0f9c33c5cf
 
 COCOAPODS: 1.10.0

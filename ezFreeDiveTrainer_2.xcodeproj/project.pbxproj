@@ -12,6 +12,9 @@
 		2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */; };
 		2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */; };
 		2F0A61BD25920E340006BFE9 /* TrainingModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */; };
+		2F2D15072594B3FA00CE6522 /* ReduceTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */; };
+		2F2D150B2594B9F800CE6522 /* ReduceTimeBreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D150A2594B9F800CE6522 /* ReduceTimeBreathViewController.swift */; };
+		2F2D15122595774D00CE6522 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D15112595774D00CE6522 /* ColorExtension.swift */; };
 		2F435DCA258C4A8B00AB02B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DC9258C4A8B00AB02B8 /* AppDelegate.swift */; };
 		2F435DCC258C4A8B00AB02B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DCB258C4A8B00AB02B8 /* SceneDelegate.swift */; };
 		2F435DCE258C4A8B00AB02B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DCD258C4A8B00AB02B8 /* ViewController.swift */; };
@@ -22,6 +25,15 @@
 		2F435DEB258C548200AB02B8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DEA258C548200AB02B8 /* LogInViewController.swift */; };
 		2F435DF3258C5CF100AB02B8 /* orgbundID in Resources */ = {isa = PBXBuildFile; fileRef = 2F435DF2258C5CF100AB02B8 /* orgbundID */; };
 		2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */; };
+		2FF419FE25957CDE006B01AC /* ReduceStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF419FD25957CDE006B01AC /* ReduceStepViewController.swift */; };
+		2FF41A0125957CF4006B01AC /* ReduceStepBreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A0025957CF4006B01AC /* ReduceStepBreathViewController.swift */; };
+		2FF41A112595807B006B01AC /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A102595807B006B01AC /* CoreDataHelper.swift */; };
+		2FF41A1425958198006B01AC /* RTTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A1325958198006B01AC /* RTTimerViewController.swift */; };
+		2FF41A17259581AF006B01AC /* RTBTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A16259581AE006B01AC /* RTBTimerViewController.swift */; };
+		2FF41A1A259581BD006B01AC /* RSTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A19259581BD006B01AC /* RSTimerViewController.swift */; };
+		2FF41A1D259581CF006B01AC /* RSBTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A1C259581CF006B01AC /* RSBTimerViewController.swift */; };
+		2FF41A2625958E50006B01AC /* RTSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A2525958E50006B01AC /* RTSetViewController.swift */; };
+		2FF41A312595B952006B01AC /* RTFastSetShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A302595B952006B01AC /* RTFastSetShowViewController.swift */; };
 		D4D679F46FAB5659703E55B0 /* Pods_ezFreeDiveTrainer_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692980BF67F6D1A7C0F26DDF /* Pods_ezFreeDiveTrainer_2.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +44,9 @@
 		2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeSelectViewController.swift; sourceTree = "<group>"; };
 		2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeTableViewCell.swift; sourceTree = "<group>"; };
+		2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeViewController.swift; sourceTree = "<group>"; };
+		2F2D150A2594B9F800CE6522 /* ReduceTimeBreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeBreathViewController.swift; sourceTree = "<group>"; };
+		2F2D15112595774D00CE6522 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		2F435DC6258C4A8B00AB02B8 /* ezFreeDiveTrainer_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ezFreeDiveTrainer_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F435DC9258C4A8B00AB02B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F435DCB258C4A8B00AB02B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +58,16 @@
 		2F435DE7258C541B00AB02B8 /* GDriveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDriveManager.swift; sourceTree = "<group>"; };
 		2F435DEA258C548200AB02B8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2F435DF2258C5CF100AB02B8 /* orgbundID */ = {isa = PBXFileReference; lastKnownFileType = text; path = orgbundID; sourceTree = "<group>"; };
-		2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLogInManager.swift; sourceTree = "<group>"; };
+		2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacebookLogInManager.swift; path = LogIn/FacebookLogInManager.swift; sourceTree = "<group>"; };
+		2FF419FD25957CDE006B01AC /* ReduceStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStepViewController.swift; sourceTree = "<group>"; };
+		2FF41A0025957CF4006B01AC /* ReduceStepBreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStepBreathViewController.swift; sourceTree = "<group>"; };
+		2FF41A102595807B006B01AC /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		2FF41A1325958198006B01AC /* RTTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTTimerViewController.swift; sourceTree = "<group>"; };
+		2FF41A16259581AE006B01AC /* RTBTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTBTimerViewController.swift; sourceTree = "<group>"; };
+		2FF41A19259581BD006B01AC /* RSTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTimerViewController.swift; sourceTree = "<group>"; };
+		2FF41A1C259581CF006B01AC /* RSBTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSBTimerViewController.swift; sourceTree = "<group>"; };
+		2FF41A2525958E50006B01AC /* RTSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTSetViewController.swift; sourceTree = "<group>"; };
+		2FF41A302595B952006B01AC /* RTFastSetShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTFastSetShowViewController.swift; sourceTree = "<group>"; };
 		692980BF67F6D1A7C0F26DDF /* Pods_ezFreeDiveTrainer_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ezFreeDiveTrainer_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF712E1D1E17CE435AD56903 /* Pods-ezFreeDiveTrainer_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ezFreeDiveTrainer_2.release.xcconfig"; path = "Target Support Files/Pods-ezFreeDiveTrainer_2/Pods-ezFreeDiveTrainer_2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,23 +92,69 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2F0A61A82591E3440006BFE9 /* TabViewControllers */ = {
+		2F2D150D259576A100CE6522 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F2D1516259577E400CE6522 /* LogIn */,
+				2F2D15152595778900CE6522 /* Tab */,
+				2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */,
+				2FF41A1F259581DB006B01AC /* RT */,
+				2FF41A20259581E5006B01AC /* RTB */,
+				2FF41A212595820B006B01AC /* RS */,
+				2FF41A2225958218006B01AC /* RSB */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2F2D150F259576DC00CE6522 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2F2D15102595772700CE6522 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2F2D15112595774D00CE6522 /* ColorExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		2F2D15152595778900CE6522 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
 				2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */,
 				2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */,
 				2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */,
 			);
-			name = TabViewControllers;
+			name = Tab;
 			sourceTree = "<group>";
 		};
-		2F0A61B72592033F0006BFE9 /* TrainingControllers */ = {
+		2F2D1516259577E400CE6522 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */,
-				2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */,
+				2F435DEA258C548200AB02B8 /* LogInViewController.swift */,
 			);
-			name = TrainingControllers;
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		2F2D15172595780100CE6522 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */,
+				2F435DE7258C541B00AB02B8 /* GDriveManager.swift */,
+				2FF41A102595807B006B01AC /* CoreDataHelper.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		2F2D15182595782D00CE6522 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Datas;
 			sourceTree = "<group>";
 		};
 		2F435DBD258C4A8B00AB02B8 = {
@@ -112,42 +182,55 @@
 				2F435DCB258C4A8B00AB02B8 /* SceneDelegate.swift */,
 				2F435DCD258C4A8B00AB02B8 /* ViewController.swift */,
 				2F435DF2258C5CF100AB02B8 /* orgbundID */,
-				2F0A61B72592033F0006BFE9 /* TrainingControllers */,
-				2F0A61A82591E3440006BFE9 /* TabViewControllers */,
-				2F435DEE258C54AF00AB02B8 /* LogIn */,
 				2F435DCF258C4A8B00AB02B8 /* Main.storyboard */,
 				2F435DD2258C4A8D00AB02B8 /* Assets.xcassets */,
 				2F435DD4258C4A8D00AB02B8 /* LaunchScreen.storyboard */,
 				2F435DD7258C4A8D00AB02B8 /* Info.plist */,
+				2F2D15182595782D00CE6522 /* Datas */,
+				2F2D15172595780100CE6522 /* Manager */,
+				2F2D15102595772700CE6522 /* Extension */,
+				2F2D150F259576DC00CE6522 /* Views */,
+				2F2D150D259576A100CE6522 /* Controllers */,
 			);
 			path = ezFreeDiveTrainer_2;
 			sourceTree = "<group>";
 		};
-		2F435DED258C548E00AB02B8 /* GoogleLogIn */ = {
+		2FF41A1F259581DB006B01AC /* RT */ = {
 			isa = PBXGroup;
 			children = (
-				2F435DE7258C541B00AB02B8 /* GDriveManager.swift */,
+				2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */,
+				2FF41A1325958198006B01AC /* RTTimerViewController.swift */,
+				2FF41A2525958E50006B01AC /* RTSetViewController.swift */,
+				2FF41A302595B952006B01AC /* RTFastSetShowViewController.swift */,
 			);
-			name = GoogleLogIn;
-			path = ..;
+			name = RT;
 			sourceTree = "<group>";
 		};
-		2F435DEE258C54AF00AB02B8 /* LogIn */ = {
+		2FF41A20259581E5006B01AC /* RTB */ = {
 			isa = PBXGroup;
 			children = (
-				2F435DEA258C548200AB02B8 /* LogInViewController.swift */,
-				2F435DFC258C767600AB02B8 /* FacebookLogIn */,
-				2F435DED258C548E00AB02B8 /* GoogleLogIn */,
+				2F2D150A2594B9F800CE6522 /* ReduceTimeBreathViewController.swift */,
+				2FF41A16259581AE006B01AC /* RTBTimerViewController.swift */,
 			);
-			path = LogIn;
+			path = RTB;
 			sourceTree = "<group>";
 		};
-		2F435DFC258C767600AB02B8 /* FacebookLogIn */ = {
+		2FF41A212595820B006B01AC /* RS */ = {
 			isa = PBXGroup;
 			children = (
-				2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */,
+				2FF419FD25957CDE006B01AC /* ReduceStepViewController.swift */,
+				2FF41A19259581BD006B01AC /* RSTimerViewController.swift */,
 			);
-			name = FacebookLogIn;
+			name = RS;
+			sourceTree = "<group>";
+		};
+		2FF41A2225958218006B01AC /* RSB */ = {
+			isa = PBXGroup;
+			children = (
+				2FF41A0025957CF4006B01AC /* ReduceStepBreathViewController.swift */,
+				2FF41A1C259581CF006B01AC /* RSBTimerViewController.swift */,
+			);
+			path = RSB;
 			sourceTree = "<group>";
 		};
 		A76033317029AB6F72128AA8 /* Pods */ = {
@@ -295,14 +378,26 @@
 				2F435DCE258C4A8B00AB02B8 /* ViewController.swift in Sources */,
 				2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */,
 				2F435DCA258C4A8B00AB02B8 /* AppDelegate.swift in Sources */,
+				2FF41A1D259581CF006B01AC /* RSBTimerViewController.swift in Sources */,
 				2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */,
+				2FF41A112595807B006B01AC /* CoreDataHelper.swift in Sources */,
+				2F2D15072594B3FA00CE6522 /* ReduceTimeViewController.swift in Sources */,
+				2F2D15122595774D00CE6522 /* ColorExtension.swift in Sources */,
 				2F435DE8258C541B00AB02B8 /* GDriveManager.swift in Sources */,
 				2F0A61AE2591E3880006BFE9 /* DiaryViewController.swift in Sources */,
+				2FF41A0125957CF4006B01AC /* ReduceStepBreathViewController.swift in Sources */,
+				2FF41A1425958198006B01AC /* RTTimerViewController.swift in Sources */,
+				2FF41A312595B952006B01AC /* RTFastSetShowViewController.swift in Sources */,
+				2FF41A1A259581BD006B01AC /* RSTimerViewController.swift in Sources */,
 				2F435DEB258C548200AB02B8 /* LogInViewController.swift in Sources */,
+				2FF41A2625958E50006B01AC /* RTSetViewController.swift in Sources */,
 				2F435DCC258C4A8B00AB02B8 /* SceneDelegate.swift in Sources */,
 				2F0A61AA2591E3690006BFE9 /* TrainingViewController.swift in Sources */,
+				2FF41A17259581AF006B01AC /* RTBTimerViewController.swift in Sources */,
 				2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */,
 				2F0A61BD25920E340006BFE9 /* TrainingModeTableViewCell.swift in Sources */,
+				2F2D150B2594B9F800CE6522 /* ReduceTimeBreathViewController.swift in Sources */,
+				2FF419FE25957CDE006B01AC /* ReduceStepViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
