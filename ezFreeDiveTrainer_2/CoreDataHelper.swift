@@ -34,7 +34,7 @@ class CoreDataHelper: NSObject {
         var sqlUrl = URL(fileURLWithPath: NSHomeDirectory())
         sqlUrl.appendPathComponent("Documents")
         //通常檔名結尾會設成sqlite
-        sqlUrl.appendPathComponent("note.sqlite")
+        sqlUrl.appendPathComponent("tables.sqlite")
         description.url = sqlUrl
         //如果要關閉journal mode，只產生一個sqlite檔案，可以打開這個選項
         //description.setOption(["journal_mode":"DELETE"] as NSDictionary, forKey: NSSQLitePragmasOption)

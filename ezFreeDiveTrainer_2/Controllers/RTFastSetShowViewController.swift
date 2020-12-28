@@ -13,6 +13,27 @@ class RTFastSetShowViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //跳窗好用
+//        let button = sender as? UIButton
+//        let buttonFrame = button?.frame ?? CGRect.zero
+//        let popoverViewSize = CGSize(width: 400, height: 200)
+//        let popoverContentController = self.storyboard?.instantiateViewController(withIdentifier: "RTFastSetShowVC") as? RTFastSetShowViewController
+//        //設定彈出來多少
+//        popoverContentController?.preferredContentSize = popoverViewSize
+//
+//        popoverContentController?.modalPresentationStyle = .popover
+//        if let popoverPresentationController = popoverContentController?.popoverPresentationController {
+//            popoverPresentationController.permittedArrowDirections = .up
+//            popoverPresentationController.sourceView = self.view
+//            popoverPresentationController.sourceRect = buttonFrame
+//            popoverPresentationController.delegate = self
+//
+//            if let popoverController = popoverContentController {
+//                present(popoverController, animated: true, completion: nil)
+//            }
+//        }
+        
     }
     
 

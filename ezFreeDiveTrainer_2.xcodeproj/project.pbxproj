@@ -25,6 +25,10 @@
 		2F435DEB258C548200AB02B8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DEA258C548200AB02B8 /* LogInViewController.swift */; };
 		2F435DF3258C5CF100AB02B8 /* orgbundID in Resources */ = {isa = PBXBuildFile; fileRef = 2F435DF2258C5CF100AB02B8 /* orgbundID */; };
 		2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */; };
+		2FDFF68E2597927A0022C0F2 /* RTCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF68D2597927A0022C0F2 /* RTCellTableViewCell.swift */; };
+		2FDFF69225979C5E0022C0F2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF69025979C5E0022C0F2 /* Model.xcdatamodeld */; };
+		2FDFF69925979D630022C0F2 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF69825979D630022C0F2 /* TableData.swift */; };
+		2FDFF69D2597C1780022C0F2 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF69C2597C1780022C0F2 /* TextExtension.swift */; };
 		2FF419FE25957CDE006B01AC /* ReduceStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF419FD25957CDE006B01AC /* ReduceStepViewController.swift */; };
 		2FF41A0125957CF4006B01AC /* ReduceStepBreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A0025957CF4006B01AC /* ReduceStepBreathViewController.swift */; };
 		2FF41A112595807B006B01AC /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A102595807B006B01AC /* CoreDataHelper.swift */; };
@@ -59,6 +63,10 @@
 		2F435DEA258C548200AB02B8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2F435DF2258C5CF100AB02B8 /* orgbundID */ = {isa = PBXFileReference; lastKnownFileType = text; path = orgbundID; sourceTree = "<group>"; };
 		2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacebookLogInManager.swift; path = LogIn/FacebookLogInManager.swift; sourceTree = "<group>"; };
+		2FDFF68D2597927A0022C0F2 /* RTCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCellTableViewCell.swift; sourceTree = "<group>"; };
+		2FDFF69125979C5E0022C0F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		2FDFF69825979D630022C0F2 /* TableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
+		2FDFF69C2597C1780022C0F2 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		2FF419FD25957CDE006B01AC /* ReduceStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStepViewController.swift; sourceTree = "<group>"; };
 		2FF41A0025957CF4006B01AC /* ReduceStepBreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStepBreathViewController.swift; sourceTree = "<group>"; };
 		2FF41A102595807B006B01AC /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				2F2D15112595774D00CE6522 /* ColorExtension.swift */,
+				2FDFF69C2597C1780022C0F2 /* TextExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -153,6 +162,7 @@
 		2F2D15182595782D00CE6522 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
+				2FDFF69825979D630022C0F2 /* TableData.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -183,6 +193,7 @@
 				2F435DCD258C4A8B00AB02B8 /* ViewController.swift */,
 				2F435DF2258C5CF100AB02B8 /* orgbundID */,
 				2F435DCF258C4A8B00AB02B8 /* Main.storyboard */,
+				2FDFF69025979C5E0022C0F2 /* Model.xcdatamodeld */,
 				2F435DD2258C4A8D00AB02B8 /* Assets.xcassets */,
 				2F435DD4258C4A8D00AB02B8 /* LaunchScreen.storyboard */,
 				2F435DD7258C4A8D00AB02B8 /* Info.plist */,
@@ -201,6 +212,7 @@
 				2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */,
 				2FF41A1325958198006B01AC /* RTTimerViewController.swift */,
 				2FF41A2525958E50006B01AC /* RTSetViewController.swift */,
+				2FDFF68D2597927A0022C0F2 /* RTCellTableViewCell.swift */,
 				2FF41A302595B952006B01AC /* RTFastSetShowViewController.swift */,
 			);
 			name = RT;
@@ -376,10 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F435DCE258C4A8B00AB02B8 /* ViewController.swift in Sources */,
+				2FDFF69D2597C1780022C0F2 /* TextExtension.swift in Sources */,
 				2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */,
 				2F435DCA258C4A8B00AB02B8 /* AppDelegate.swift in Sources */,
 				2FF41A1D259581CF006B01AC /* RSBTimerViewController.swift in Sources */,
 				2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */,
+				2FDFF68E2597927A0022C0F2 /* RTCellTableViewCell.swift in Sources */,
 				2FF41A112595807B006B01AC /* CoreDataHelper.swift in Sources */,
 				2F2D15072594B3FA00CE6522 /* ReduceTimeViewController.swift in Sources */,
 				2F2D15122595774D00CE6522 /* ColorExtension.swift in Sources */,
@@ -394,8 +408,10 @@
 				2F435DCC258C4A8B00AB02B8 /* SceneDelegate.swift in Sources */,
 				2F0A61AA2591E3690006BFE9 /* TrainingViewController.swift in Sources */,
 				2FF41A17259581AF006B01AC /* RTBTimerViewController.swift in Sources */,
+				2FDFF69925979D630022C0F2 /* TableData.swift in Sources */,
 				2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */,
 				2F0A61BD25920E340006BFE9 /* TrainingModeTableViewCell.swift in Sources */,
+				2FDFF69225979C5E0022C0F2 /* Model.xcdatamodeld in Sources */,
 				2F2D150B2594B9F800CE6522 /* ReduceTimeBreathViewController.swift in Sources */,
 				2FF419FE25957CDE006B01AC /* ReduceStepViewController.swift in Sources */,
 			);
@@ -603,6 +619,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2FDFF69025979C5E0022C0F2 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2FDFF69125979C5E0022C0F2 /* Model.xcdatamodel */,
+			);
+			currentVersion = 2FDFF69125979C5E0022C0F2 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2F435DBE258C4A8B00AB02B8 /* Project object */;
 }
