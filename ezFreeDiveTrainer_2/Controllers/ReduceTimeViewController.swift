@@ -13,7 +13,6 @@ class ReduceTimeViewController: UIViewController {
     @IBOutlet weak var myTableView: UITableView!
     //接資料
     var data: [TableData] = []
-    var showData:[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,19 +52,20 @@ class ReduceTimeViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "setVCSegue" {
-//            let setVC = segue.destination as! RTSetViewController
-//            setVC.delegate = self
-//            setVC.currentData =
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "timerCountSegue" {
+            if let indexPath = self.myTableView.indexPathForSelectedRow {
+                guard let segueForLabelName = self.data[indexPath.row].tableName else {return}
+                let vc = segue.destination as! RTCounterViewController
+                vc.catchTableName = segueForLabelName
+            }
+        }
+    }
     
-
 }
 
 extension ReduceTimeViewController: UITableViewDelegate {
-    
+
 }
 
 extension ReduceTimeViewController: UITableViewDataSource {

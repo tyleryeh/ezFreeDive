@@ -101,22 +101,16 @@ class RTSetViewController: UIViewController {
             if let setNumber = Int(tableSet.text!) {
                 for i in 0..<setNumber {
                     let interval = totalBreathTime - reduceTime * i
-                    self.showDataBreath.append(intToStringForTimeFormatter(input: interval))
-                    self.showDataHold.append(intToStringForTimeFormatter(input: holeTime))
-                    self.myTableView.reloadData()
+                    self.showDataBreath.append(SubFunctions.shared.intToStringForTimeFormatter(input: interval))
+                    self.showDataHold.append(SubFunctions.shared.intToStringForTimeFormatter(input: holeTime))
                 }
+                self.myTableView.reloadData()
             }
         } else {
             print("missing information")
             return
         }
  
-    }
-    
-    func intToStringForTimeFormatter(input: Int) -> String{
-        let min = input / 60 % 60
-        let sec = input % 60
-        return String(format: "%02i:%02i", min, sec)
     }
     
     @IBAction func saveBtnPressed(_ sender: Any) {
