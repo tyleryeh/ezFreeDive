@@ -15,7 +15,7 @@ class TrainingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "訓練"
-            
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "091EternalConstance"))
     }
     
     @objc func clickButton() {

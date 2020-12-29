@@ -20,7 +20,8 @@ class ReduceTimeViewController: UIViewController {
         // Do any additional setup after loading the view.
         myTableView.delegate = self
         myTableView.dataSource = self
-
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "091EternalConstance"))
+        self.myTableView.backgroundColor = UIColor.clear
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,12 +74,20 @@ extension ReduceTimeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//
+////        cell.textLabel?.text = "666"
+//        cell.textLabel?.text = self.data[indexPath.row].tableName
+//        cell.detailTextLabel?.text = self.data[indexPath.row].saveDate
         
-//        cell.textLabel?.text = "666"
-        cell.textLabel?.text = self.data[indexPath.row].tableName
-        cell.detailTextLabel?.text = self.data[indexPath.row].saveDate
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ReduceTimeCellTableViewCell
         
+//        cell.textLabel?.text = self.data[indexPath.row].tableName
+//        cell.detailTextLabel?.text = self.data[indexPath.row].saveDate
+        
+        cell.myLabel.text = self.data[indexPath.row].tableName
+//        cell.myImage.image = UIImage(named: "salutation")
+//        cell.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "077ColdEvening"))
         return cell
         
     }

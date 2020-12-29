@@ -8,3 +8,23 @@ com.googleusercontent.apps.183366530677-6pg0g8496n2027g3dkd38ij2vplpk284
 
 
 目前用的Google登入是Kent Class的 MAPD30 GDrive Demo
+
+        //跳窗好用
+//        let button = sender as? UIButton
+//        let buttonFrame = button?.frame ?? CGRect.zero
+//        let popoverViewSize = CGSize(width: 400, height: 200)
+//        let popoverContentController = self.storyboard?.instantiateViewController(withIdentifier: "RTFastSetShowVC") as? RTFastSetShowViewController
+//        //設定彈出來多少
+//        popoverContentController?.preferredContentSize = popoverViewSize
+//
+//        popoverContentController?.modalPresentationStyle = .popover
+//        if let popoverPresentationController = popoverContentController?.popoverPresentationController {
+//            popoverPresentationController.permittedArrowDirections = .up
+//            popoverPresentationController.sourceView = self.view
+//            popoverPresentationController.sourceRect = buttonFrame
+//            popoverPresentationController.delegate = self
+//
+//            if let popoverController = popoverContentController {
+//                present(popoverController, animated: true, completion: nil)
+//            }
+//        }

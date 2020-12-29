@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class RTCounterViewController: UIViewController {
 
+    @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

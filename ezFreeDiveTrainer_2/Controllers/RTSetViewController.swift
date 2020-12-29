@@ -30,18 +30,32 @@ class RTSetViewController: UIViewController {
         myTableView.delegate = self
         myTableView.dataSource = self
         
-        tableRTName.placeholder = "Table名稱"
-        tableBreathTime.placeholder = "調息時間sec, e.g 90"
-        tableSet.placeholder = "組數, e.g 5"
-        tableHoldTime.placeholder = "閉氣時間sec, e.g 90"
-        tableReduceTime.placeholder = "遞減時間sec, e.g 5"
+        textPlaceHolderColorSet(textfiled: tableRTName, string: "Table名稱", color: UIColor.gray)
+        textPlaceHolderColorSet(textfiled: tableBreathTime, string: "調息時間sec, e.g 90", color: UIColor.gray)
+        textPlaceHolderColorSet(textfiled: tableSet, string: "組數, e.g 5", color: UIColor.gray)
+        textPlaceHolderColorSet(textfiled: tableHoldTime, string: "閉氣時間sec, e.g 90", color: UIColor.gray)
+        textPlaceHolderColorSet(textfiled: tableReduceTime, string: "遞減時間sec, e.g 5", color: UIColor.gray)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGesture)
+        view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "091EternalConstance"))
+        myTableView.backgroundColor = UIColor.clear
+        
+        tableBreathTime.backgroundColor = UIColor.clear
+        tableReduceTime.backgroundColor = UIColor.clear
+        tableHoldTime.backgroundColor = UIColor.clear
+        tableSet.backgroundColor = UIColor.clear
+        tableRTName.backgroundColor = UIColor.clear
         
 //        refreshCoreData()
         
     }
+    
+    func textPlaceHolderColorSet(textfiled: UITextField, string: String, color: UIColor) {
+        let set = NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor: color])
+        textfiled.attributedPlaceholder = set
+    }
+    
     @objc func hideKeyboard(){
         view.endEditing(true)
     }
@@ -179,6 +193,8 @@ extension RTSetViewController: UITableViewDataSource {
         
         cell.breathtime.text = self.showDataBreath[indexPath.row]
         cell.holdtime.text = self.showDataHold[indexPath.row]
+        
+        cell.backgroundColor = UIColor.clear
         
         return cell
     }
