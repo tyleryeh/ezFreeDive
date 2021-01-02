@@ -14,7 +14,7 @@ class TrainingViewController: UIViewController {
     @IBOutlet weak var addBtnPressed: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "訓練"
+        self.title = "Training"
         self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "091EternalConstance"))
     }
     
@@ -35,6 +35,3 @@ class TrainingViewController: UIViewController {
     
 }
 
-extension UIButton {
-    
-}

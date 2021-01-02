@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrainingModeTableViewCell: UITableViewCell {
+class TrainingModeCellTableViewCell: UITableViewCell {
     
     @IBOutlet var modeTital: UILabel!
     @IBOutlet var modeDescryption: UILabel!

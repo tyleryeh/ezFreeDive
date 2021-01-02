@@ -56,7 +56,7 @@ class ReduceTimeViewController: UIViewController {
         if segue.identifier == "timerCountSegue" {
             if let indexPath = self.myTableView.indexPathForSelectedRow {
                 guard let segueForLabelName = self.data[indexPath.row].tableName else {return}
-                let vc = segue.destination as! RTCounterViewController
+                let vc = segue.destination as! RTCounter2ViewController
                 vc.catchTableName = segueForLabelName
             }
         }

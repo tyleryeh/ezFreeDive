@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0A1555259D7CB300D16BD4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A1554259D7CB300D16BD4 /* MapViewController.swift */; };
 		2F0A61AA2591E3690006BFE9 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */; };
 		2F0A61AE2591E3880006BFE9 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */; };
 		2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */; };
 		2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */; };
-		2F0A61BD25920E340006BFE9 /* TrainingModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */; };
-		2F2346142599C95700A6B5AB /* RTCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2346132599C95700A6B5AB /* RTCounterViewController.swift */; };
+		2F0A61BD25920E340006BFE9 /* TrainingModeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */; };
 		2F2346172599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2346162599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift */; };
 		2F2D15072594B3FA00CE6522 /* ReduceTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */; };
 		2F2D150B2594B9F800CE6522 /* ReduceTimeBreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D150A2594B9F800CE6522 /* ReduceTimeBreathViewController.swift */; };
@@ -27,8 +27,12 @@
 		2F435DEB258C548200AB02B8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DEA258C548200AB02B8 /* LogInViewController.swift */; };
 		2F435DF3258C5CF100AB02B8 /* orgbundID in Resources */ = {isa = PBXBuildFile; fileRef = 2F435DF2258C5CF100AB02B8 /* orgbundID */; };
 		2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */; };
+		2F4C8E57259C5C5B00F551C8 /* DiaryAddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */; };
+		2F79340F25A04B1E00D70772 /* RTCounter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79340E25A04B1E00D70772 /* RTCounter2ViewController.swift */; };
+		2F79341225A04B9800D70772 /* CircleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79341125A04B9800D70772 /* CircleUIView.swift */; };
 		2F8A40F2259AE24E007274DD /* SubFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A40F1259AE24E007274DD /* SubFunctions.swift */; };
 		2F8A40FB259B04A3007274DD /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A40FA259B04A3007274DD /* NotificationName.swift */; };
+		2FA2A37D259C1D39005CDA80 /* DiaryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */; };
 		2FCC0E5F259A69B400A47376 /* TrainingModeCell2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC0E5E259A69B400A47376 /* TrainingModeCell2TableViewCell.swift */; };
 		2FDFF68E2597927A0022C0F2 /* RTCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF68D2597927A0022C0F2 /* RTCellTableViewCell.swift */; };
 		2FDFF69225979C5E0022C0F2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF69025979C5E0022C0F2 /* Model.xcdatamodeld */; };
@@ -48,12 +52,12 @@
 
 /* Begin PBXFileReference section */
 		117AB83AEA8FAE734314CB2E /* Pods-ezFreeDiveTrainer_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ezFreeDiveTrainer_2.debug.xcconfig"; path = "Target Support Files/Pods-ezFreeDiveTrainer_2/Pods-ezFreeDiveTrainer_2.debug.xcconfig"; sourceTree = "<group>"; };
+		2F0A1554259D7CB300D16BD4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeSelectViewController.swift; sourceTree = "<group>"; };
-		2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeTableViewCell.swift; sourceTree = "<group>"; };
-		2F2346132599C95700A6B5AB /* RTCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCounterViewController.swift; sourceTree = "<group>"; };
+		2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeCellTableViewCell.swift; sourceTree = "<group>"; };
 		2F2346162599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeCellTableViewCell.swift; sourceTree = "<group>"; };
 		2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeViewController.swift; sourceTree = "<group>"; };
 		2F2D150A2594B9F800CE6522 /* ReduceTimeBreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeBreathViewController.swift; sourceTree = "<group>"; };
@@ -70,8 +74,12 @@
 		2F435DEA258C548200AB02B8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2F435DF2258C5CF100AB02B8 /* orgbundID */ = {isa = PBXFileReference; lastKnownFileType = text; path = orgbundID; sourceTree = "<group>"; };
 		2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacebookLogInManager.swift; path = LogIn/FacebookLogInManager.swift; sourceTree = "<group>"; };
+		2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddNoteViewController.swift; sourceTree = "<group>"; };
+		2F79340E25A04B1E00D70772 /* RTCounter2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCounter2ViewController.swift; sourceTree = "<group>"; };
+		2F79341125A04B9800D70772 /* CircleUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleUIView.swift; sourceTree = "<group>"; };
 		2F8A40F1259AE24E007274DD /* SubFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFunctions.swift; sourceTree = "<group>"; };
 		2F8A40FA259B04A3007274DD /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCellTableViewCell.swift; sourceTree = "<group>"; };
 		2FCC0E5E259A69B400A47376 /* TrainingModeCell2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeCell2TableViewCell.swift; sourceTree = "<group>"; };
 		2FDFF68D2597927A0022C0F2 /* RTCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCellTableViewCell.swift; sourceTree = "<group>"; };
 		2FDFF69125979C5E0022C0F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -122,9 +130,10 @@
 		2F2D150D259576A100CE6522 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */,
+				2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */,
 				2F2D1516259577E400CE6522 /* LogIn */,
 				2F2D15152595778900CE6522 /* Tab */,
-				2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */,
 				2FF41A1F259581DB006B01AC /* RT */,
 				2FF41A20259581E5006B01AC /* RTB */,
 				2FF41A212595820B006B01AC /* RS */,
@@ -136,8 +145,9 @@
 		2F2D150F259576DC00CE6522 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2F0A61BC25920E340006BFE9 /* TrainingModeTableViewCell.swift */,
+				2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */,
 				2FCC0E5E259A69B400A47376 /* TrainingModeCell2TableViewCell.swift */,
+				2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 			children = (
 				2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */,
 				2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */,
+				2F0A1554259D7CB300D16BD4 /* MapViewController.swift */,
 				2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */,
 			);
 			name = Tab;
@@ -177,6 +188,7 @@
 				2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */,
 				2F435DE7258C541B00AB02B8 /* GDriveManager.swift */,
 				2FF41A102595807B006B01AC /* CoreDataHelper.swift */,
+				2F79341125A04B9800D70772 /* CircleUIView.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -233,7 +245,7 @@
 			children = (
 				2F2346192599D0F700A6B5AB /* cells */,
 				2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */,
-				2F2346132599C95700A6B5AB /* RTCounterViewController.swift */,
+				2F79340E25A04B1E00D70772 /* RTCounter2ViewController.swift */,
 				2FF41A2525958E50006B01AC /* RTSetViewController.swift */,
 				2FF41A302595B952006B01AC /* RTFastSetShowViewController.swift */,
 				2FF41A1325958198006B01AC /* RTTimerViewController.swift */,
@@ -410,17 +422,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F79340F25A04B1E00D70772 /* RTCounter2ViewController.swift in Sources */,
 				2F2346172599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift in Sources */,
 				2F435DCE258C4A8B00AB02B8 /* ViewController.swift in Sources */,
+				2F79341225A04B9800D70772 /* CircleUIView.swift in Sources */,
 				2FDFF69D2597C1780022C0F2 /* TextExtension.swift in Sources */,
 				2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */,
+				2FA2A37D259C1D39005CDA80 /* DiaryCellTableViewCell.swift in Sources */,
 				2F435DCA258C4A8B00AB02B8 /* AppDelegate.swift in Sources */,
 				2FF41A1D259581CF006B01AC /* RSBTimerViewController.swift in Sources */,
 				2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */,
 				2FDFF68E2597927A0022C0F2 /* RTCellTableViewCell.swift in Sources */,
 				2FF41A112595807B006B01AC /* CoreDataHelper.swift in Sources */,
 				2F2D15072594B3FA00CE6522 /* ReduceTimeViewController.swift in Sources */,
-				2F2346142599C95700A6B5AB /* RTCounterViewController.swift in Sources */,
+				2F4C8E57259C5C5B00F551C8 /* DiaryAddNoteViewController.swift in Sources */,
+				2F0A1555259D7CB300D16BD4 /* MapViewController.swift in Sources */,
 				2F2D15122595774D00CE6522 /* ColorExtension.swift in Sources */,
 				2F435DE8258C541B00AB02B8 /* GDriveManager.swift in Sources */,
 				2F0A61AE2591E3880006BFE9 /* DiaryViewController.swift in Sources */,
@@ -438,7 +454,7 @@
 				2F8A40FB259B04A3007274DD /* NotificationName.swift in Sources */,
 				2F8A40F2259AE24E007274DD /* SubFunctions.swift in Sources */,
 				2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */,
-				2F0A61BD25920E340006BFE9 /* TrainingModeTableViewCell.swift in Sources */,
+				2F0A61BD25920E340006BFE9 /* TrainingModeCellTableViewCell.swift in Sources */,
 				2FDFF69225979C5E0022C0F2 /* Model.xcdatamodeld in Sources */,
 				2F2D150B2594B9F800CE6522 /* ReduceTimeBreathViewController.swift in Sources */,
 				2FF419FE25957CDE006B01AC /* ReduceStepViewController.swift in Sources */,

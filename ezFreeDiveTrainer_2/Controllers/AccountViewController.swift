@@ -11,7 +11,7 @@ class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "帳號"
+        self.title = "Account"
 
         // Do any additional setup after loading the view.
     }

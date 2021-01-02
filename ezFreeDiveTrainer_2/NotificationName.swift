@@ -11,4 +11,5 @@ extension Notification.Name {
     static let finishProgress = Notification.Name(rawValue: "finishProgress")
     static let pauseProgress = Notification.Name(rawValue: "pauseProgress")
     static let continueProgress = Notification.Name(rawValue: "continueProgress")
+    static let timerFinish = Notification.Name(rawValue: "timerFinish")
 }
