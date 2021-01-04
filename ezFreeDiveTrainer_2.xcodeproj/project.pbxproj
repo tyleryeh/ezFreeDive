@@ -30,6 +30,11 @@
 		2F4C8E57259C5C5B00F551C8 /* DiaryAddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */; };
 		2F79340F25A04B1E00D70772 /* RTCounter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79340E25A04B1E00D70772 /* RTCounter2ViewController.swift */; };
 		2F79341225A04B9800D70772 /* CircleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79341125A04B9800D70772 /* CircleUIView.swift */; };
+		2F79341C25A1B3C500D70772 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79341B25A1B3C500D70772 /* HistoryViewController.swift */; };
+		2F79342525A1B55800D70772 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79341F25A1B55800D70772 /* TimelineTableViewCell.swift */; };
+		2F79342625A1B55800D70772 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79342025A1B55800D70772 /* Timeline.swift */; };
+		2F79342725A1B55800D70772 /* TimelinePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79342225A1B55800D70772 /* TimelinePoint.swift */; };
+		2F79342825A1B55800D70772 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F79342325A1B55800D70772 /* TimelineTableViewCell.xib */; };
 		2F8A40F2259AE24E007274DD /* SubFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A40F1259AE24E007274DD /* SubFunctions.swift */; };
 		2F8A40FB259B04A3007274DD /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A40FA259B04A3007274DD /* NotificationName.swift */; };
 		2FA2A37D259C1D39005CDA80 /* DiaryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */; };
@@ -77,6 +82,12 @@
 		2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddNoteViewController.swift; sourceTree = "<group>"; };
 		2F79340E25A04B1E00D70772 /* RTCounter2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCounter2ViewController.swift; sourceTree = "<group>"; };
 		2F79341125A04B9800D70772 /* CircleUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleUIView.swift; sourceTree = "<group>"; };
+		2F79341B25A1B3C500D70772 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		2F79341F25A1B55800D70772 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		2F79342025A1B55800D70772 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		2F79342125A1B55800D70772 /* TimelineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewCell.h; sourceTree = "<group>"; };
+		2F79342225A1B55800D70772 /* TimelinePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePoint.swift; sourceTree = "<group>"; };
+		2F79342325A1B55800D70772 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
 		2F8A40F1259AE24E007274DD /* SubFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFunctions.swift; sourceTree = "<group>"; };
 		2F8A40FA259B04A3007274DD /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -166,10 +177,10 @@
 		2F2D15152595778900CE6522 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
-				2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */,
-				2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */,
-				2F0A1554259D7CB300D16BD4 /* MapViewController.swift */,
-				2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */,
+				2F79341A25A1B37600D70772 /* History */,
+				2F79341725A1B34100D70772 /* Training */,
+				2F79341625A1B32800D70772 /* Diary */,
+				2F79341925A1B36000D70772 /* Account */,
 			);
 			name = Tab;
 			sourceTree = "<group>";
@@ -238,6 +249,52 @@
 				2F2D150D259576A100CE6522 /* Controllers */,
 			);
 			path = ezFreeDiveTrainer_2;
+			sourceTree = "<group>";
+		};
+		2F79341625A1B32800D70772 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */,
+				2F0A1554259D7CB300D16BD4 /* MapViewController.swift */,
+			);
+			name = Diary;
+			sourceTree = "<group>";
+		};
+		2F79341725A1B34100D70772 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+		2F79341925A1B36000D70772 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		2F79341A25A1B37600D70772 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				2F79341B25A1B3C500D70772 /* HistoryViewController.swift */,
+				2F79341E25A1B55800D70772 /* TimelineTableViewCell */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		2F79341E25A1B55800D70772 /* TimelineTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2F79341F25A1B55800D70772 /* TimelineTableViewCell.swift */,
+				2F79342025A1B55800D70772 /* Timeline.swift */,
+				2F79342125A1B55800D70772 /* TimelineTableViewCell.h */,
+				2F79342225A1B55800D70772 /* TimelinePoint.swift */,
+				2F79342325A1B55800D70772 /* TimelineTableViewCell.xib */,
+			);
+			path = TimelineTableViewCell;
 			sourceTree = "<group>";
 		};
 		2FF41A1F259581DB006B01AC /* RT */ = {
@@ -351,6 +408,7 @@
 			files = (
 				2F435DD6258C4A8D00AB02B8 /* LaunchScreen.storyboard in Resources */,
 				2F435DD3258C4A8D00AB02B8 /* Assets.xcassets in Resources */,
+				2F79342825A1B55800D70772 /* TimelineTableViewCell.xib in Resources */,
 				2F435DD1258C4A8B00AB02B8 /* Main.storyboard in Resources */,
 				2F435DF3258C5CF100AB02B8 /* orgbundID in Resources */,
 			);
@@ -430,6 +488,7 @@
 				2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */,
 				2FA2A37D259C1D39005CDA80 /* DiaryCellTableViewCell.swift in Sources */,
 				2F435DCA258C4A8B00AB02B8 /* AppDelegate.swift in Sources */,
+				2F79341C25A1B3C500D70772 /* HistoryViewController.swift in Sources */,
 				2FF41A1D259581CF006B01AC /* RSBTimerViewController.swift in Sources */,
 				2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */,
 				2FDFF68E2597927A0022C0F2 /* RTCellTableViewCell.swift in Sources */,
@@ -439,6 +498,7 @@
 				2F0A1555259D7CB300D16BD4 /* MapViewController.swift in Sources */,
 				2F2D15122595774D00CE6522 /* ColorExtension.swift in Sources */,
 				2F435DE8258C541B00AB02B8 /* GDriveManager.swift in Sources */,
+				2F79342525A1B55800D70772 /* TimelineTableViewCell.swift in Sources */,
 				2F0A61AE2591E3880006BFE9 /* DiaryViewController.swift in Sources */,
 				2FF41A0125957CF4006B01AC /* ReduceStepBreathViewController.swift in Sources */,
 				2FF41A1425958198006B01AC /* RTTimerViewController.swift in Sources */,
@@ -456,8 +516,10 @@
 				2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */,
 				2F0A61BD25920E340006BFE9 /* TrainingModeCellTableViewCell.swift in Sources */,
 				2FDFF69225979C5E0022C0F2 /* Model.xcdatamodeld in Sources */,
+				2F79342625A1B55800D70772 /* Timeline.swift in Sources */,
 				2F2D150B2594B9F800CE6522 /* ReduceTimeBreathViewController.swift in Sources */,
 				2FF419FE25957CDE006B01AC /* ReduceStepViewController.swift in Sources */,
+				2F79342725A1B55800D70772 /* TimelinePoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
