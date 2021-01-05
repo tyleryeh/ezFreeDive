@@ -159,7 +159,9 @@ class RTCounter2ViewController: UIViewController {
 }
 
 extension RTCounter2ViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension RTCounter2ViewController: UITableViewDataSource {

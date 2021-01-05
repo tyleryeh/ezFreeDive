@@ -30,6 +30,7 @@ class HistoryViewController: UIViewController {
         myInnerView.backgroundColor = UIColor.clear
         
         self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "091EternalConstance"))
+        self.title = "History"
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.backgroundColor = UIColor.clear
@@ -39,6 +40,12 @@ class HistoryViewController: UIViewController {
         
         fetchCoreData()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        fetchCoreData()
+        self.myTableView.reloadData()
     }
     
     func fetchCoreData() {
@@ -69,7 +76,9 @@ class HistoryViewController: UIViewController {
 }
 
 extension HistoryViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension HistoryViewController: UITableViewDataSource {
@@ -122,6 +131,7 @@ extension HistoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TimelineTableViewCell
+        
         cell.backgroundColor = UIColor.clear
         cell.bubbleColor = UIColor.clear
         cell.bubbleEnabled = false
@@ -131,6 +141,7 @@ extension HistoryViewController: UITableViewDataSource {
 //        cell.descriptionLabel.numberOfLines = 0
         cell.timeline.width = 3.5
         cell.timelinePoint = TimelinePoint(diameter: 10, lineWidth: 1, color: UIColor.black, filled: true)
+        
         cell.timeline.leftMargin = tableView.bounds.width * 0.18
         
         

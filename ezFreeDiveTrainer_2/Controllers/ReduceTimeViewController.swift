@@ -65,7 +65,9 @@ class ReduceTimeViewController: UIViewController {
 }
 
 extension ReduceTimeViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension ReduceTimeViewController: UITableViewDataSource {
