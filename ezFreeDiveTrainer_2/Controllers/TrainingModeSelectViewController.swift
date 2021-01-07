@@ -19,6 +19,7 @@ class TrainingModeSelectViewController: UIViewController {
         myTrainingModeTableView.separatorStyle = .none
         myTrainingModeTableView.backgroundColor = UIColor.clear
         self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "091EternalConstance"))
+        self.title = "Training"
     }
 
     

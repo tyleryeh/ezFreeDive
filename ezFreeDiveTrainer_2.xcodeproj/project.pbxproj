@@ -13,6 +13,8 @@
 		2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */; };
 		2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */; };
 		2F0A61BD25920E340006BFE9 /* TrainingModeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */; };
+		2F202A2625A551CB0093CD73 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F202A2525A551CB0093CD73 /* MoodViewController.swift */; };
+		2F202A2A25A55CBC0093CD73 /* MoodViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */; };
 		2F2346172599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2346162599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift */; };
 		2F2D15072594B3FA00CE6522 /* ReduceTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */; };
 		2F2D150B2594B9F800CE6522 /* ReduceTimeBreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D150A2594B9F800CE6522 /* ReduceTimeBreathViewController.swift */; };
@@ -38,6 +40,9 @@
 		2F79342825A1B55800D70772 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F79342325A1B55800D70772 /* TimelineTableViewCell.xib */; };
 		2F8A40F2259AE24E007274DD /* SubFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A40F1259AE24E007274DD /* SubFunctions.swift */; };
 		2F8A40FB259B04A3007274DD /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A40FA259B04A3007274DD /* NotificationName.swift */; };
+		2F9B575725A45F1300F527CC /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B575625A45F1300F527CC /* WeatherViewController.swift */; };
+		2F9B575A25A470FC00F527CC /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B575925A470FC00F527CC /* WeatherData.swift */; };
+		2F9B575D25A4717200F527CC /* JsonDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B575C25A4717200F527CC /* JsonDecode.swift */; };
 		2FA2A37D259C1D39005CDA80 /* DiaryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */; };
 		2FC556CF25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */; };
 		2FCC0E5F259A69B400A47376 /* TrainingModeCell2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC0E5E259A69B400A47376 /* TrainingModeCell2TableViewCell.swift */; };
@@ -53,7 +58,6 @@
 		2FF41A1A259581BD006B01AC /* RSTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A19259581BD006B01AC /* RSTimerViewController.swift */; };
 		2FF41A1D259581CF006B01AC /* RSBTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A1C259581CF006B01AC /* RSBTimerViewController.swift */; };
 		2FF41A2625958E50006B01AC /* RTSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A2525958E50006B01AC /* RTSetViewController.swift */; };
-		2FF41A312595B952006B01AC /* RTFastSetShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A302595B952006B01AC /* RTFastSetShowViewController.swift */; };
 		D4D679F46FAB5659703E55B0 /* Pods_ezFreeDiveTrainer_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692980BF67F6D1A7C0F26DDF /* Pods_ezFreeDiveTrainer_2.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,8 @@
 		2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeSelectViewController.swift; sourceTree = "<group>"; };
 		2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeCellTableViewCell.swift; sourceTree = "<group>"; };
+		2F202A2525A551CB0093CD73 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
+		2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F2346162599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeCellTableViewCell.swift; sourceTree = "<group>"; };
 		2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeViewController.swift; sourceTree = "<group>"; };
 		2F2D150A2594B9F800CE6522 /* ReduceTimeBreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeBreathViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,9 @@
 		2F79342325A1B55800D70772 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
 		2F8A40F1259AE24E007274DD /* SubFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFunctions.swift; sourceTree = "<group>"; };
 		2F8A40FA259B04A3007274DD /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		2F9B575625A45F1300F527CC /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		2F9B575925A470FC00F527CC /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		2F9B575C25A4717200F527CC /* JsonDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecode.swift; sourceTree = "<group>"; };
 		2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCellTableViewCell.swift; sourceTree = "<group>"; };
 		2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMyCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FCC0E5E259A69B400A47376 /* TrainingModeCell2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeCell2TableViewCell.swift; sourceTree = "<group>"; };
@@ -108,7 +117,6 @@
 		2FF41A19259581BD006B01AC /* RSTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTimerViewController.swift; sourceTree = "<group>"; };
 		2FF41A1C259581CF006B01AC /* RSBTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSBTimerViewController.swift; sourceTree = "<group>"; };
 		2FF41A2525958E50006B01AC /* RTSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTSetViewController.swift; sourceTree = "<group>"; };
-		2FF41A302595B952006B01AC /* RTFastSetShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTFastSetShowViewController.swift; sourceTree = "<group>"; };
 		692980BF67F6D1A7C0F26DDF /* Pods_ezFreeDiveTrainer_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ezFreeDiveTrainer_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF712E1D1E17CE435AD56903 /* Pods-ezFreeDiveTrainer_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ezFreeDiveTrainer_2.release.xcconfig"; path = "Target Support Files/Pods-ezFreeDiveTrainer_2/Pods-ezFreeDiveTrainer_2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +182,7 @@
 				2FDFF69C2597C1780022C0F2 /* TextExtension.swift */,
 				2F8A40F1259AE24E007274DD /* SubFunctions.swift */,
 				2F8A40FA259B04A3007274DD /* NotificationName.swift */,
+				2F9B575C25A4717200F527CC /* JsonDecode.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				2FDFF69825979D630022C0F2 /* TableData.swift */,
+				2F9B575925A470FC00F527CC /* WeatherData.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -258,9 +268,9 @@
 		2F79341625A1B32800D70772 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				2F9B575125A45EBB00F527CC /* DiaryCell */,
 				2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */,
 				2F7049DE25A32A97007B7543 /* DiaryNoteSetViewController.swift */,
-				2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */,
 				2F0A1554259D7CB300D16BD4 /* MapViewController.swift */,
 			);
 			name = Diary;
@@ -303,6 +313,17 @@
 			path = TimelineTableViewCell;
 			sourceTree = "<group>";
 		};
+		2F9B575125A45EBB00F527CC /* DiaryCell */ = {
+			isa = PBXGroup;
+			children = (
+				2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */,
+				2F9B575625A45F1300F527CC /* WeatherViewController.swift */,
+				2F202A2525A551CB0093CD73 /* MoodViewController.swift */,
+				2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */,
+			);
+			path = DiaryCell;
+			sourceTree = "<group>";
+		};
 		2FF41A1F259581DB006B01AC /* RT */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,7 +331,6 @@
 				2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */,
 				2F79340E25A04B1E00D70772 /* RTCounter2ViewController.swift */,
 				2FF41A2525958E50006B01AC /* RTSetViewController.swift */,
-				2FF41A302595B952006B01AC /* RTFastSetShowViewController.swift */,
 				2FF41A1325958198006B01AC /* RTTimerViewController.swift */,
 			);
 			name = RT;
@@ -488,6 +508,7 @@
 			files = (
 				2F79340F25A04B1E00D70772 /* RTCounter2ViewController.swift in Sources */,
 				2F2346172599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift in Sources */,
+				2F202A2A25A55CBC0093CD73 /* MoodViewCollectionViewCell.swift in Sources */,
 				2F435DCE258C4A8B00AB02B8 /* ViewController.swift in Sources */,
 				2F79341225A04B9800D70772 /* CircleUIView.swift in Sources */,
 				2FDFF69D2597C1780022C0F2 /* TextExtension.swift in Sources */,
@@ -509,13 +530,15 @@
 				2F0A61AE2591E3880006BFE9 /* DiaryViewController.swift in Sources */,
 				2FF41A0125957CF4006B01AC /* ReduceStepBreathViewController.swift in Sources */,
 				2FF41A1425958198006B01AC /* RTTimerViewController.swift in Sources */,
-				2FF41A312595B952006B01AC /* RTFastSetShowViewController.swift in Sources */,
 				2FF41A1A259581BD006B01AC /* RSTimerViewController.swift in Sources */,
 				2F435DEB258C548200AB02B8 /* LogInViewController.swift in Sources */,
 				2FF41A2625958E50006B01AC /* RTSetViewController.swift in Sources */,
+				2F202A2625A551CB0093CD73 /* MoodViewController.swift in Sources */,
+				2F9B575725A45F1300F527CC /* WeatherViewController.swift in Sources */,
 				2F435DCC258C4A8B00AB02B8 /* SceneDelegate.swift in Sources */,
 				2F0A61AA2591E3690006BFE9 /* TrainingViewController.swift in Sources */,
 				2FF41A17259581AF006B01AC /* RTBTimerViewController.swift in Sources */,
+				2F9B575D25A4717200F527CC /* JsonDecode.swift in Sources */,
 				2FCC0E5F259A69B400A47376 /* TrainingModeCell2TableViewCell.swift in Sources */,
 				2FDFF69925979D630022C0F2 /* TableData.swift in Sources */,
 				2F8A40FB259B04A3007274DD /* NotificationName.swift in Sources */,
@@ -523,6 +546,7 @@
 				2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */,
 				2F0A61BD25920E340006BFE9 /* TrainingModeCellTableViewCell.swift in Sources */,
 				2FC556CF25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift in Sources */,
+				2F9B575A25A470FC00F527CC /* WeatherData.swift in Sources */,
 				2FDFF69225979C5E0022C0F2 /* Model.xcdatamodeld in Sources */,
 				2F79342625A1B55800D70772 /* Timeline.swift in Sources */,
 				2F2D150B2594B9F800CE6522 /* ReduceTimeBreathViewController.swift in Sources */,
