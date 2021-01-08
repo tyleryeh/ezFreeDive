@@ -769,7 +769,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKp-9y-eGB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048" y="2761"/>
+            <point key="canvasLocation" x="1485" y="2203"/>
         </scene>
         <!--Diary Note Set View Controller-->
         <scene sceneID="1uI-ei-NIm">
@@ -1833,22 +1833,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKM-n1-rZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="2304"/>
+            <point key="canvasLocation" x="903" y="2304"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="dAg-pv-0QH">
             <objects>
-                <viewController id="hV1-OD-4Zk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapVC" id="hV1-OD-4Zk" customClass="MapViewController" customModule="ezFreeDiveTrainer_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="du9-ru-TnA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-iy-s0Z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9Uf-2K-Vau"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lJd-iy-s0Z" firstAttribute="bottom" secondItem="9Uf-2K-Vau" secondAttribute="bottom" id="3mV-y5-ZZa"/>
+                            <constraint firstItem="lJd-iy-s0Z" firstAttribute="trailing" secondItem="9Uf-2K-Vau" secondAttribute="trailing" id="dvI-q3-Hft"/>
+                            <constraint firstItem="lJd-iy-s0Z" firstAttribute="leading" secondItem="9Uf-2K-Vau" secondAttribute="leading" id="eQy-1I-Oeh"/>
+                            <constraint firstItem="lJd-iy-s0Z" firstAttribute="top" secondItem="9Uf-2K-Vau" secondAttribute="top" id="mdL-aK-pOQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myMapView" destination="lJd-iy-s0Z" id="KNq-fD-fI7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCY-yi-CJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="3215"/>
+            <point key="canvasLocation" x="2049" y="3102"/>
         </scene>
     </scenes>
     <resources>

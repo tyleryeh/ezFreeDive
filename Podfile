@@ -11,6 +11,6 @@ pod "GoogleSignIn"
 pod "FBSDKCoreKit/Swift"
 pod "FBSDKLoginKit"
 pod "FBSDKShareKit"
-pod 'UICircularProgressRing'
 pod 'FSCalendar'
+pod 'SCLAlertView'
 end

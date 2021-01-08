@@ -59,6 +59,12 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>ezFreeDiveTraining uses user loaction to identify current location to add the dive site.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>ezFreeDiveTraining uses user loaction to identify current location to add the dive site.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>ezFreeDiveTraining uses user loaction to identify current location to add the dive site.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -80,6 +86,11 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string></string>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

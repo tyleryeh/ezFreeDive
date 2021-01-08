@@ -13,6 +13,7 @@
 		2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */; };
 		2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */; };
 		2F0A61BD25920E340006BFE9 /* TrainingModeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */; };
+		2F1DDE6D25A788F000FAC05E /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DDE6C25A788F000FAC05E /* UIImage+Resize.swift */; };
 		2F202A2625A551CB0093CD73 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F202A2525A551CB0093CD73 /* MoodViewController.swift */; };
 		2F202A2A25A55CBC0093CD73 /* MoodViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */; };
 		2F2346172599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2346162599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift */; };
@@ -63,12 +64,13 @@
 
 /* Begin PBXFileReference section */
 		117AB83AEA8FAE734314CB2E /* Pods-ezFreeDiveTrainer_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ezFreeDiveTrainer_2.debug.xcconfig"; path = "Target Support Files/Pods-ezFreeDiveTrainer_2/Pods-ezFreeDiveTrainer_2.debug.xcconfig"; sourceTree = "<group>"; };
-		2F0A1554259D7CB300D16BD4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2F0A1554259D7CB300D16BD4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeSelectViewController.swift; sourceTree = "<group>"; };
 		2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeCellTableViewCell.swift; sourceTree = "<group>"; };
+		2F1DDE6C25A788F000FAC05E /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		2F202A2525A551CB0093CD73 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F2346162599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				2F8A40F1259AE24E007274DD /* SubFunctions.swift */,
 				2F8A40FA259B04A3007274DD /* NotificationName.swift */,
 				2F9B575C25A4717200F527CC /* JsonDecode.swift */,
+				2F1DDE6C25A788F000FAC05E /* UIImage+Resize.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -271,7 +274,6 @@
 				2F9B575125A45EBB00F527CC /* DiaryCell */,
 				2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */,
 				2F7049DE25A32A97007B7543 /* DiaryNoteSetViewController.swift */,
-				2F0A1554259D7CB300D16BD4 /* MapViewController.swift */,
 			);
 			name = Diary;
 			sourceTree = "<group>";
@@ -320,6 +322,7 @@
 				2F9B575625A45F1300F527CC /* WeatherViewController.swift */,
 				2F202A2525A551CB0093CD73 /* MoodViewController.swift */,
 				2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */,
+				2F0A1554259D7CB300D16BD4 /* MapViewController.swift */,
 			);
 			path = DiaryCell;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				2F4C8E57259C5C5B00F551C8 /* DiaryAddNoteViewController.swift in Sources */,
 				2F0A1555259D7CB300D16BD4 /* MapViewController.swift in Sources */,
 				2F2D15122595774D00CE6522 /* ColorExtension.swift in Sources */,
+				2F1DDE6D25A788F000FAC05E /* UIImage+Resize.swift in Sources */,
 				2F435DE8258C541B00AB02B8 /* GDriveManager.swift in Sources */,
 				2F79342525A1B55800D70772 /* TimelineTableViewCell.swift in Sources */,
 				2F0A61AE2591E3880006BFE9 /* DiaryViewController.swift in Sources */,

@@ -171,6 +171,8 @@ extension DiaryNoteSetViewController: UICollectionViewDataSource {
     //定位
     @objc func loactionBtn() {
         print("placeholderBtn")
+        let vc = storyboard?.instantiateViewController(identifier: "mapVC") as! MapViewController
+        show(vc, sender: nil)
     }
     //天氣
     @objc func weatherBtn() {
