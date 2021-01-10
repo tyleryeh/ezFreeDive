@@ -33,7 +33,7 @@
 		2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */; };
 		2F4C8E57259C5C5B00F551C8 /* DiaryAddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */; };
 		2F7049DF25A32A97007B7543 /* DiaryNoteSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7049DE25A32A97007B7543 /* DiaryNoteSetViewController.swift */; };
-		2F79340F25A04B1E00D70772 /* RTCounter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79340E25A04B1E00D70772 /* RTCounter2ViewController.swift */; };
+		2F79340F25A04B1E00D70772 /* RTCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79340E25A04B1E00D70772 /* RTCounterViewController.swift */; };
 		2F79341225A04B9800D70772 /* CircleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79341125A04B9800D70772 /* CircleUIView.swift */; };
 		2F79341C25A1B3C500D70772 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79341B25A1B3C500D70772 /* HistoryViewController.swift */; };
 		2F79342525A1B55800D70772 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79341F25A1B55800D70772 /* TimelineTableViewCell.swift */; };
@@ -93,7 +93,7 @@
 		2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacebookLogInManager.swift; path = LogIn/FacebookLogInManager.swift; sourceTree = "<group>"; };
 		2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddNoteViewController.swift; sourceTree = "<group>"; };
 		2F7049DE25A32A97007B7543 /* DiaryNoteSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryNoteSetViewController.swift; sourceTree = "<group>"; };
-		2F79340E25A04B1E00D70772 /* RTCounter2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCounter2ViewController.swift; sourceTree = "<group>"; };
+		2F79340E25A04B1E00D70772 /* RTCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCounterViewController.swift; sourceTree = "<group>"; };
 		2F79341125A04B9800D70772 /* CircleUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleUIView.swift; sourceTree = "<group>"; };
 		2F79341B25A1B3C500D70772 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		2F79341F25A1B55800D70772 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 			children = (
 				2F2346192599D0F700A6B5AB /* cells */,
 				2F2D15062594B3FA00CE6522 /* ReduceTimeViewController.swift */,
-				2F79340E25A04B1E00D70772 /* RTCounter2ViewController.swift */,
+				2F79340E25A04B1E00D70772 /* RTCounterViewController.swift */,
 				2FF41A2525958E50006B01AC /* RTSetViewController.swift */,
 				2FF41A1325958198006B01AC /* RTTimerViewController.swift */,
 			);
@@ -512,7 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F79340F25A04B1E00D70772 /* RTCounter2ViewController.swift in Sources */,
+				2F79340F25A04B1E00D70772 /* RTCounterViewController.swift in Sources */,
 				2F2346172599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift in Sources */,
 				2F202A2A25A55CBC0093CD73 /* MoodViewCollectionViewCell.swift in Sources */,
 				2F435DCE258C4A8B00AB02B8 /* ViewController.swift in Sources */,

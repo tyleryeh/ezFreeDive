@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class RTCounter2ViewController: UIViewController {
+class RTCounterViewController: UIViewController {
 
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var myImageView: UIImageView!
@@ -44,9 +44,15 @@ class RTCounter2ViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(didFinishTimer), name: .timerFinish, object: nil)
         
+        myCircleView.createCircleShape(color1: "#d4fc79", color2: "#96e6a1")
         
         fetchCoreData()
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super .viewWillDisappear(animated)
+        timer.invalidate()
     }
     
     @objc func didFinishTimer() {
@@ -161,13 +167,13 @@ class RTCounter2ViewController: UIViewController {
 
 }
 
-extension RTCounter2ViewController: UITableViewDelegate {
+extension RTCounterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-extension RTCounter2ViewController: UITableViewDataSource {
+extension RTCounterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.showDataBreath.count
     }
