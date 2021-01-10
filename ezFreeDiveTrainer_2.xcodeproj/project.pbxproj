@@ -14,6 +14,7 @@
 		2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */; };
 		2F0A61BD25920E340006BFE9 /* TrainingModeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */; };
 		2F1DDE6D25A788F000FAC05E /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DDE6C25A788F000FAC05E /* UIImage+Resize.swift */; };
+		2F1DDE7C25A7FEF400FAC05E /* DiaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DDE7B25A7FEF400FAC05E /* DiaryData.swift */; };
 		2F202A2625A551CB0093CD73 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F202A2525A551CB0093CD73 /* MoodViewController.swift */; };
 		2F202A2A25A55CBC0093CD73 /* MoodViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */; };
 		2F2346172599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2346162599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift */; };
@@ -42,7 +43,7 @@
 		2F8A40F2259AE24E007274DD /* SubFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A40F1259AE24E007274DD /* SubFunctions.swift */; };
 		2F8A40FB259B04A3007274DD /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A40FA259B04A3007274DD /* NotificationName.swift */; };
 		2F9B575725A45F1300F527CC /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B575625A45F1300F527CC /* WeatherViewController.swift */; };
-		2F9B575A25A470FC00F527CC /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B575925A470FC00F527CC /* WeatherData.swift */; };
+		2F9B575A25A470FC00F527CC /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B575925A470FC00F527CC /* Datas.swift */; };
 		2F9B575D25A4717200F527CC /* JsonDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B575C25A4717200F527CC /* JsonDecode.swift */; };
 		2FA2A37D259C1D39005CDA80 /* DiaryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */; };
 		2FC556CF25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */; };
@@ -71,6 +72,7 @@
 		2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeSelectViewController.swift; sourceTree = "<group>"; };
 		2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeCellTableViewCell.swift; sourceTree = "<group>"; };
 		2F1DDE6C25A788F000FAC05E /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		2F1DDE7B25A7FEF400FAC05E /* DiaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryData.swift; sourceTree = "<group>"; };
 		2F202A2525A551CB0093CD73 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F2346162599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTimeCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,7 +104,7 @@
 		2F8A40F1259AE24E007274DD /* SubFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFunctions.swift; sourceTree = "<group>"; };
 		2F8A40FA259B04A3007274DD /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		2F9B575625A45F1300F527CC /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		2F9B575925A470FC00F527CC /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		2F9B575925A470FC00F527CC /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
 		2F9B575C25A4717200F527CC /* JsonDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecode.swift; sourceTree = "<group>"; };
 		2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCellTableViewCell.swift; sourceTree = "<group>"; };
 		2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -224,7 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				2FDFF69825979D630022C0F2 /* TableData.swift */,
-				2F9B575925A470FC00F527CC /* WeatherData.swift */,
+				2F1DDE7B25A7FEF400FAC05E /* DiaryData.swift */,
+				2F9B575925A470FC00F527CC /* Datas.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -550,10 +553,11 @@
 				2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */,
 				2F0A61BD25920E340006BFE9 /* TrainingModeCellTableViewCell.swift in Sources */,
 				2FC556CF25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift in Sources */,
-				2F9B575A25A470FC00F527CC /* WeatherData.swift in Sources */,
+				2F9B575A25A470FC00F527CC /* Datas.swift in Sources */,
 				2FDFF69225979C5E0022C0F2 /* Model.xcdatamodeld in Sources */,
 				2F79342625A1B55800D70772 /* Timeline.swift in Sources */,
 				2F2D150B2594B9F800CE6522 /* ReduceTimeBreathViewController.swift in Sources */,
+				2F1DDE7C25A7FEF400FAC05E /* DiaryData.swift in Sources */,
 				2FF419FE25957CDE006B01AC /* ReduceStepViewController.swift in Sources */,
 				2F79342725A1B55800D70772 /* TimelinePoint.swift in Sources */,
 			);

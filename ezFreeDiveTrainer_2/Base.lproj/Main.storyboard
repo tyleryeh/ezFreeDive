@@ -769,7 +769,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKp-9y-eGB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1485" y="2203"/>
+            <point key="canvasLocation" x="1480" y="2178"/>
         </scene>
         <!--Diary Note Set View Controller-->
         <scene sceneID="1uI-ei-NIm">
@@ -780,7 +780,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MK8-ty-Wi7">
-                                <rect key="frame" x="16" y="52" width="343" height="100"/>
+                                <rect key="frame" x="0.0" y="52" width="375" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Rpg-73-qaP"/>
@@ -792,7 +792,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="972-YZ-CNa" customClass="DiaryMyCollectionViewCell" customModule="ezFreeDiveTrainer_2" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="playback" reuseIdentifier="cell" id="972-YZ-CNa" customClass="DiaryMyCollectionViewCell" customModule="ezFreeDiveTrainer_2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pPF-ID-WJl">
@@ -825,20 +825,20 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLs-Cr-lpv">
-                                <rect key="frame" x="16" y="160" width="343" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLs-Cr-lpv">
+                                <rect key="frame" x="16" y="160" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-TX-UhX">
-                                <rect key="frame" x="16" y="185.5" width="343" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-TX-UhX">
+                                <rect key="frame" x="16" y="166" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J4R-8p-yic">
-                                <rect key="frame" x="16" y="211" width="343" height="34"/>
+                                <rect key="frame" x="16" y="172" width="343" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFn-mm-lEr">
                                         <rect key="frame" x="0.0" y="0.0" width="44.5" height="34"/>
@@ -860,12 +860,12 @@
                         <constraints>
                             <constraint firstItem="WNl-TX-UhX" firstAttribute="top" secondItem="WLs-Cr-lpv" secondAttribute="bottom" constant="6" id="Arg-K7-dko"/>
                             <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="WNl-TX-UhX" secondAttribute="trailing" constant="16" id="CZB-Sk-Cjr"/>
-                            <constraint firstItem="MK8-ty-Wi7" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" constant="16" id="IrW-uh-qvI"/>
+                            <constraint firstItem="MK8-ty-Wi7" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" id="IrW-uh-qvI"/>
                             <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="WLs-Cr-lpv" secondAttribute="trailing" constant="16" id="JLL-6p-JUJ"/>
                             <constraint firstItem="WLs-Cr-lpv" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" constant="16" id="Rbr-LM-uVL"/>
                             <constraint firstItem="J4R-8p-yic" firstAttribute="top" secondItem="WNl-TX-UhX" secondAttribute="bottom" constant="6" id="TYN-cf-hvZ"/>
                             <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="J4R-8p-yic" secondAttribute="trailing" constant="16" id="Ye6-K9-U4n"/>
-                            <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="MK8-ty-Wi7" secondAttribute="trailing" constant="16" id="Yjx-mz-euS"/>
+                            <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="MK8-ty-Wi7" secondAttribute="trailing" id="Yjx-mz-euS"/>
                             <constraint firstItem="MK8-ty-Wi7" firstAttribute="top" secondItem="BSN-ai-FbZ" secondAttribute="top" constant="8" id="dpI-Og-Pin"/>
                             <constraint firstItem="J4R-8p-yic" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" constant="16" id="fpo-3Y-z0x"/>
                             <constraint firstItem="WNl-TX-UhX" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" constant="16" id="gbt-9Z-fh2"/>
@@ -876,8 +876,9 @@
                     <connections>
                         <outlet property="myCollectionVIewLayout" destination="vBX-DP-Mpk" id="dVf-T5-aBV"/>
                         <outlet property="myCollectionView" destination="MK8-ty-Wi7" id="hOJ-Od-2un"/>
-                        <outlet property="myInfoLabelForDive" destination="WNl-TX-UhX" id="uVl-7v-uul"/>
+                        <outlet property="myInfoLabelForDiveSite" destination="WNl-TX-UhX" id="uVl-7v-uul"/>
                         <outlet property="myInfoLabelForThings" destination="WLs-Cr-lpv" id="gmj-tp-okk"/>
+                        <segue destination="hV1-OD-4Zk" kind="show" identifier="diveSiteSegue" id="vVv-Em-OuQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcr-Nc-hG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -893,11 +894,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTu-kp-TqQ" customClass="FSCalendar">
-                                <rect key="frame" x="16" y="44" width="343" height="174"/>
+                                <rect key="frame" x="16" y="44" width="343" height="230"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="Qe4-8Y-kRV"/>
+                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XMU-ZY-N88">
-                                <rect key="frame" x="16" y="226" width="343" height="392"/>
+                                <rect key="frame" x="16" y="282" width="343" height="336"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="119" id="rL3-v2-cyr" customClass="DiaryCellTableViewCell" customModule="ezFreeDiveTrainer_2" customModuleProvider="target">
@@ -969,14 +973,13 @@
                         <viewLayoutGuide key="safeArea" id="ypb-wt-bYK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ypb-wt-bYK" firstAttribute="trailing" secondItem="XMU-ZY-N88" secondAttribute="trailing" constant="16" id="97F-2O-zIS"/>
-                            <constraint firstItem="XMU-ZY-N88" firstAttribute="bottom" secondItem="ypb-wt-bYK" secondAttribute="bottom" id="Gdr-9R-xTe"/>
-                            <constraint firstItem="ypb-wt-bYK" firstAttribute="trailing" secondItem="ZTu-kp-TqQ" secondAttribute="trailing" constant="16" id="Hfr-df-vsz"/>
-                            <constraint firstItem="XMU-ZY-N88" firstAttribute="leading" secondItem="ypb-wt-bYK" secondAttribute="leading" constant="16" id="MRP-mi-YeK"/>
-                            <constraint firstItem="ZTu-kp-TqQ" firstAttribute="leading" secondItem="ypb-wt-bYK" secondAttribute="leading" constant="16" id="New-zW-RMw"/>
-                            <constraint firstItem="ypb-wt-bYK" firstAttribute="bottom" secondItem="ZTu-kp-TqQ" secondAttribute="bottom" constant="400" id="U7t-K7-4sg"/>
-                            <constraint firstItem="ZTu-kp-TqQ" firstAttribute="top" secondItem="ypb-wt-bYK" secondAttribute="top" id="cUb-zO-9s5"/>
-                            <constraint firstItem="XMU-ZY-N88" firstAttribute="top" secondItem="ZTu-kp-TqQ" secondAttribute="bottom" constant="8" id="m2h-G1-ysY"/>
+                            <constraint firstItem="XMU-ZY-N88" firstAttribute="leading" secondItem="ypb-wt-bYK" secondAttribute="leading" constant="16" id="D5j-m1-UJD"/>
+                            <constraint firstItem="ZTu-kp-TqQ" firstAttribute="leading" secondItem="ypb-wt-bYK" secondAttribute="leading" constant="16" id="Dim-pa-p2o"/>
+                            <constraint firstItem="XMU-ZY-N88" firstAttribute="top" secondItem="ZTu-kp-TqQ" secondAttribute="bottom" constant="8" id="GeC-ou-Bn9"/>
+                            <constraint firstItem="ypb-wt-bYK" firstAttribute="trailing" secondItem="ZTu-kp-TqQ" secondAttribute="trailing" constant="16" id="LM7-Cl-yE9"/>
+                            <constraint firstItem="XMU-ZY-N88" firstAttribute="bottom" secondItem="ypb-wt-bYK" secondAttribute="bottom" id="eD5-Rp-OCH"/>
+                            <constraint firstItem="ypb-wt-bYK" firstAttribute="trailing" secondItem="XMU-ZY-N88" secondAttribute="trailing" constant="16" id="nvC-mK-rwu"/>
+                            <constraint firstItem="ZTu-kp-TqQ" firstAttribute="top" secondItem="ypb-wt-bYK" secondAttribute="top" id="oKx-X2-ZVg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B6q-ri-pH3">
@@ -1221,33 +1224,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdM-gu-B4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5975.1999999999998" y="2223.2383808095956"/>
-        </scene>
-        <!--Map View Controller-->
-        <scene sceneID="MMM-gt-XGk">
-            <objects>
-                <viewController id="NAc-bI-F31" customClass="MapViewController" customModule="ezFreeDiveTrainer_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5JI-fN-Dlg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tJ2-Q6-LBs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ZJL-kM-U4I"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="tJ2-Q6-LBs" firstAttribute="trailing" secondItem="ZJL-kM-U4I" secondAttribute="trailing" id="7H7-m5-PV4"/>
-                            <constraint firstItem="tJ2-Q6-LBs" firstAttribute="bottom" secondItem="ZJL-kM-U4I" secondAttribute="bottom" id="89L-C7-sNz"/>
-                            <constraint firstItem="tJ2-Q6-LBs" firstAttribute="leading" secondItem="ZJL-kM-U4I" secondAttribute="leading" id="8VV-S1-Bsm"/>
-                            <constraint firstItem="tJ2-Q6-LBs" firstAttribute="top" secondItem="ZJL-kM-U4I" secondAttribute="top" id="QBR-4X-EPP"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="SCi-py-vHs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QDY-xL-Vi6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4708" y="3524"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6ai-SW-JLk">
@@ -1844,7 +1820,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-iy-s0Z">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Uf-2K-Vau"/>
@@ -1856,13 +1832,14 @@
                             <constraint firstItem="lJd-iy-s0Z" firstAttribute="top" secondItem="9Uf-2K-Vau" secondAttribute="top" id="mdL-aK-pOQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ah8-qb-Kqf"/>
                     <connections>
                         <outlet property="myMapView" destination="lJd-iy-s0Z" id="KNq-fD-fI7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCY-yi-CJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="3102"/>
+            <point key="canvasLocation" x="2049" y="3078"/>
         </scene>
     </scenes>
     <resources>

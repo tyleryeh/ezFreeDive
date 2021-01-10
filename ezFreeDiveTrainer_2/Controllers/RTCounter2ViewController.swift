@@ -87,6 +87,9 @@ class RTCounter2ViewController: UIViewController {
     }
     
     @IBAction func start() {
+        holdArrayCounter = 0
+        breathArrayCounter = 0
+        timer.invalidate()
         duration = Int(circleBreath[0])
         let trans = SubFunctions.shared.intToStringForTimeFormatter(input: duration)
         myTimerLabel.text = "\(trans)"

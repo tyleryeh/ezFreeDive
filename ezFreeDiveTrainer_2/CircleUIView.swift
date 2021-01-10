@@ -15,10 +15,10 @@ class CircleUIView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        createCircleShape(mustBeSquareView: self.bounds.maxX / 10)
+        createCircleShape(mustBeSquareView: self.bounds.maxX / 10, color1: "#d4fc79", color2: "#96e6a1")
     }
     
-    func createCircleShape(mustBeSquareView: CGFloat) {
+    func createCircleShape(mustBeSquareView: CGFloat, color1 c1: String, color2 c2: String) {
         
 //        let path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.bounds.width / 2)
         let path = UIBezierPath(roundedRect: CGRect(x: mustBeSquareView, y: mustBeSquareView, width: self.bounds.width, height: self.bounds.height), cornerRadius: self.bounds.width / 2)
@@ -37,6 +37,16 @@ class CircleUIView: UIView {
         shapeLayer.lineWidth = 10.0
         shapeLayer.strokeEnd = 0
         self.layer.addSublayer(shapeLayer)
+        
+        let gradientLayer = CAGradientLayer()
+        let color1 = UIColor(hexString: c1).cgColor
+        let color2 = UIColor(hexString: c2).cgColor
+        gradientLayer.colors = [color1, color2]
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width * 2, height: self.bounds.width + shapeLayer.lineWidth * 3)
+        
+        self.layer.addSublayer(gradientLayer)
+        gradientLayer.mask = shapeLayer
+        
         
     }
     

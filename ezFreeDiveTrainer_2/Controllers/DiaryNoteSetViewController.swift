@@ -12,7 +12,7 @@ class DiaryNoteSetViewController: UIViewController {
     @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var myCollectionVIewLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var myInfoLabelForThings: UILabel!
-    @IBOutlet weak var myInfoLabelForDive: UILabel!
+    @IBOutlet weak var myInfoLabelForDiveSite: UILabel!
     
     var location = ""
     var moodemoji = ""
@@ -21,6 +21,7 @@ class DiaryNoteSetViewController: UIViewController {
     var tepeturMin = ""
     
     var weatherInfo = [String]()
+    var mapDiveSiteData = [MapData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class DiaryNoteSetViewController: UIViewController {
         
         myCollectionVIewLayout.minimumInteritemSpacing = 1
         myCollectionVIewLayout.scrollDirection = .horizontal
+        
         
         self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "091EternalConstance"))
         myCollectionView.backgroundColor = UIColor.clear
@@ -51,6 +53,23 @@ class DiaryNoteSetViewController: UIViewController {
 //        myInfoLabelForThings.attributedText = content
         
     }
+    func updateLabelForDiveSite(label: UILabel, diveSiteName: String, isLastOne: Bool, content:  NSMutableAttributedString) {
+        
+        let siteImage = NSTextAttachment()
+        siteImage.image = #imageLiteral(resourceName: "buoy")
+        siteImage.bounds = CGRect(x: 0, y: -4.5, width: 20, height: 20)
+        content.append(NSAttributedString(attachment: siteImage))
+        
+        if isLastOne == false {
+            //我不是最後一個
+            content.append(NSAttributedString(string: " • \(diveSiteName) "))
+        } else {
+            //我是最後一個
+            content.append(NSAttributedString(string: " • \(diveSiteName)"))
+        }
+        
+        label.attributedText = content
+    }
     
     func updateLabelForThings(label: UILabel, location: String, weater: String, temMax: String, temMin: String, moodemoji: String) {
         
@@ -59,8 +78,6 @@ class DiaryNoteSetViewController: UIViewController {
             content.append(NSAttributedString(string: "\(location) • "))
         }
         if weater != "" && temMax != "" && temMin != "" {
-            
-//            let filterString = weater.startIndex
             var weaImage = ""
             switch weater {
             case "晴":
@@ -72,7 +89,6 @@ class DiaryNoteSetViewController: UIViewController {
             default:
                 weaImage = "rain"
             }
-            
             let weaterImage = NSTextAttachment()
             weaterImage.image = UIImage(named: "\(weaImage)")
             weaterImage.bounds = CGRect(x: 0, y: -4.5, width: 20, height: 20)
@@ -89,15 +105,15 @@ class DiaryNoteSetViewController: UIViewController {
         label.attributedText = content
     }
 
-/*
- // MARK: - Navigation
+
+    // MARK: - Navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "diveSiteSegue" {
+//            let diveSiteVC = segue.destination as! MapViewController
+//            diveSiteVC.delegateData = mapDiveSiteData
+//        }
+//    }
  
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
 
 }
 
@@ -171,15 +187,17 @@ extension DiaryNoteSetViewController: UICollectionViewDataSource {
     //定位
     @objc func loactionBtn() {
         print("placeholderBtn")
-        let vc = storyboard?.instantiateViewController(identifier: "mapVC") as! MapViewController
-        show(vc, sender: nil)
+        let mapVC = storyboard?.instantiateViewController(identifier: "mapVC") as! MapViewController
+        mapVC.delegate = self
+        mapVC.delegateData = mapDiveSiteData
+        show(mapVC, sender: nil)
     }
     //天氣
     @objc func weatherBtn() {
         print("cloudyBtn")
-        let vc = storyboard?.instantiateViewController(identifier: "weatherVC") as! WeatherViewController
-        vc.delegate = self
-        show(vc, sender: nil)
+        let weatherVC = storyboard?.instantiateViewController(identifier: "weatherVC") as! WeatherViewController
+        weatherVC.delegate = self
+        show(weatherVC, sender: nil)
     }
     
     
@@ -202,7 +220,9 @@ extension DiaryNoteSetViewController: UIPopoverPresentationControllerDelegate{
 }
 
 //MARK: MoodViewControllerDelegate
-extension DiaryNoteSetViewController: MoodViewControllerDelegate, WeatherViewControllerDelegate {
+extension DiaryNoteSetViewController: MoodViewControllerDelegate, WeatherViewControllerDelegate, MapViewControllerDelegate {
+    
+    //天氣更新
     func didUpdateWeatherInfo(updateWeatherInfo: [String]) {
         //hard code....
         location = updateWeatherInfo[0]
@@ -211,12 +231,28 @@ extension DiaryNoteSetViewController: MoodViewControllerDelegate, WeatherViewCon
         tepeturMin = updateWeatherInfo[3]
         updateLabelForThings(label: myInfoLabelForThings, location: location, weater: weater, temMax: tepeturMax, temMin: tepeturMin, moodemoji: moodemoji)
     }
-    
+    //心情更新
     func didUpdateMoodEmoji(emojiString: String) {
-        print("emojiString: \(emojiString)")
         moodemoji = emojiString
         updateLabelForThings(label: myInfoLabelForThings, location: location, weater: weater, temMax: tepeturMax, temMin: tepeturMin, moodemoji: moodemoji)
         
+    }
+    //潛水地點更新
+    func didUpdateDiveSite(updata data: [MapData]) {
+        mapDiveSiteData = data
+        let showALLFriendsContent = NSMutableAttributedString()
+        if data.count == 0 {
+            showALLFriendsContent.append(NSAttributedString(string: ""))
+            myInfoLabelForDiveSite.attributedText = showALLFriendsContent
+        }
+        for i in 0..<data.count {
+            guard let name = data[i].diveSiteName else {return}
+            if i == data.count - 1 {
+                updateLabelForDiveSite(label: myInfoLabelForDiveSite, diveSiteName: name, isLastOne: true, content: showALLFriendsContent)
+            } else {
+                updateLabelForDiveSite(label: myInfoLabelForDiveSite, diveSiteName: name, isLastOne: false, content: showALLFriendsContent)
+            }
+        }
     }
     
 }

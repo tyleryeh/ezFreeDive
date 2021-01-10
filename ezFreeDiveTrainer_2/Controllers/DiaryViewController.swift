@@ -27,7 +27,7 @@ class DiaryViewController: UIViewController {
         view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "091EternalConstance"))
         
         myFSCalendar.backgroundColor =  UIColor.clear
-        myFSCalendar.appearance.titleFont = UIFont.systemFont(ofSize: 20.0)
+        myFSCalendar.appearance.titleFont = UIFont.systemFont(ofSize: 16.0)
         myFSCalendar.appearance.titleDefaultColor = UIColor.darkText
 //        myFSCalendar.appearance.headerTitleFont = UIFont.systemFont(ofSize: 16.0)
 //        myFSCalendar.appearance.weekdayFont = UIFont.systemFont(ofSize: 14.0)

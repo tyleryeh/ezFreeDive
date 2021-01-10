@@ -13,3 +13,9 @@ class WeatherData {
     var maxTempture: String?
     var minTempture: String?
 }
+
+class MapData {
+    var diveSiteName: String?
+    var diveSiteLat: String?
+    var diveSiteLon: String?
+}

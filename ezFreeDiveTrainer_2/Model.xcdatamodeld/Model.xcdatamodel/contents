@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DiaryData" representedClassName=".DiaryData" syncable="YES"/>
     <entity name="TableData" representedClassName=".TableData" syncable="YES">
         <attribute name="breath" optional="YES" attributeType="String"/>
         <attribute name="hold" optional="YES" attributeType="String"/>
@@ -12,5 +13,6 @@
     </entity>
     <elements>
         <element name="TableData" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="DiaryData" positionX="-63" positionY="45" width="128" height="29"/>
     </elements>
 </model>
