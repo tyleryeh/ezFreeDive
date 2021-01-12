@@ -32,6 +32,7 @@
 		2F435DF3258C5CF100AB02B8 /* orgbundID in Resources */ = {isa = PBXBuildFile; fileRef = 2F435DF2258C5CF100AB02B8 /* orgbundID */; };
 		2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */; };
 		2F4C8E57259C5C5B00F551C8 /* DiaryAddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */; };
+		2F6C301D25ABE73100F8A123 /* EquipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6C301C25ABE73100F8A123 /* EquipViewController.swift */; };
 		2F7049DF25A32A97007B7543 /* DiaryNoteSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7049DE25A32A97007B7543 /* DiaryNoteSetViewController.swift */; };
 		2F79340F25A04B1E00D70772 /* RTCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79340E25A04B1E00D70772 /* RTCounterViewController.swift */; };
 		2F79341225A04B9800D70772 /* CircleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79341125A04B9800D70772 /* CircleUIView.swift */; };
@@ -46,12 +47,14 @@
 		2F9B575A25A470FC00F527CC /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B575925A470FC00F527CC /* Datas.swift */; };
 		2F9B575D25A4717200F527CC /* JsonDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B575C25A4717200F527CC /* JsonDecode.swift */; };
 		2FA2A37D259C1D39005CDA80 /* DiaryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */; };
+		2FC400D725AD3673003B9405 /* clockLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 2FC400D625AD3673003B9405 /* clockLottie.json */; };
 		2FC556CF25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */; };
 		2FCC0E5F259A69B400A47376 /* TrainingModeCell2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC0E5E259A69B400A47376 /* TrainingModeCell2TableViewCell.swift */; };
 		2FDFF68E2597927A0022C0F2 /* RTCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF68D2597927A0022C0F2 /* RTCellTableViewCell.swift */; };
 		2FDFF69225979C5E0022C0F2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF69025979C5E0022C0F2 /* Model.xcdatamodeld */; };
 		2FDFF69925979D630022C0F2 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF69825979D630022C0F2 /* TableData.swift */; };
 		2FDFF69D2597C1780022C0F2 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF69C2597C1780022C0F2 /* TextExtension.swift */; };
+		2FE429AE25ACA5F700C66503 /* thermometer.json in Resources */ = {isa = PBXBuildFile; fileRef = 2FE429AD25ACA5F700C66503 /* thermometer.json */; };
 		2FF419FE25957CDE006B01AC /* ReduceStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF419FD25957CDE006B01AC /* ReduceStepViewController.swift */; };
 		2FF41A0125957CF4006B01AC /* ReduceStepBreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A0025957CF4006B01AC /* ReduceStepBreathViewController.swift */; };
 		2FF41A112595807B006B01AC /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41A102595807B006B01AC /* CoreDataHelper.swift */; };
@@ -92,6 +95,7 @@
 		2F435DF2258C5CF100AB02B8 /* orgbundID */ = {isa = PBXFileReference; lastKnownFileType = text; path = orgbundID; sourceTree = "<group>"; };
 		2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacebookLogInManager.swift; path = LogIn/FacebookLogInManager.swift; sourceTree = "<group>"; };
 		2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddNoteViewController.swift; sourceTree = "<group>"; };
+		2F6C301C25ABE73100F8A123 /* EquipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipViewController.swift; sourceTree = "<group>"; };
 		2F7049DE25A32A97007B7543 /* DiaryNoteSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryNoteSetViewController.swift; sourceTree = "<group>"; };
 		2F79340E25A04B1E00D70772 /* RTCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCounterViewController.swift; sourceTree = "<group>"; };
 		2F79341125A04B9800D70772 /* CircleUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleUIView.swift; sourceTree = "<group>"; };
@@ -107,12 +111,14 @@
 		2F9B575925A470FC00F527CC /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
 		2F9B575C25A4717200F527CC /* JsonDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecode.swift; sourceTree = "<group>"; };
 		2FA2A37C259C1D39005CDA80 /* DiaryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCellTableViewCell.swift; sourceTree = "<group>"; };
+		2FC400D625AD3673003B9405 /* clockLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clockLottie.json; sourceTree = "<group>"; };
 		2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMyCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FCC0E5E259A69B400A47376 /* TrainingModeCell2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeCell2TableViewCell.swift; sourceTree = "<group>"; };
 		2FDFF68D2597927A0022C0F2 /* RTCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCellTableViewCell.swift; sourceTree = "<group>"; };
 		2FDFF69125979C5E0022C0F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		2FDFF69825979D630022C0F2 /* TableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
 		2FDFF69C2597C1780022C0F2 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		2FE429AD25ACA5F700C66503 /* thermometer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thermometer.json; sourceTree = "<group>"; };
 		2FF419FD25957CDE006B01AC /* ReduceStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStepViewController.swift; sourceTree = "<group>"; };
 		2FF41A0025957CF4006B01AC /* ReduceStepBreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStepBreathViewController.swift; sourceTree = "<group>"; };
 		2FF41A102595807B006B01AC /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -256,6 +262,8 @@
 				2F435DC9258C4A8B00AB02B8 /* AppDelegate.swift */,
 				2F435DCB258C4A8B00AB02B8 /* SceneDelegate.swift */,
 				2F435DCD258C4A8B00AB02B8 /* ViewController.swift */,
+				2FE429AD25ACA5F700C66503 /* thermometer.json */,
+				2FC400D625AD3673003B9405 /* clockLottie.json */,
 				2F435DF2258C5CF100AB02B8 /* orgbundID */,
 				2F435DCF258C4A8B00AB02B8 /* Main.storyboard */,
 				2FDFF69025979C5E0022C0F2 /* Model.xcdatamodeld */,
@@ -326,6 +334,7 @@
 				2F202A2525A551CB0093CD73 /* MoodViewController.swift */,
 				2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */,
 				2F0A1554259D7CB300D16BD4 /* MapViewController.swift */,
+				2F6C301C25ABE73100F8A123 /* EquipViewController.swift */,
 			);
 			path = DiaryCell;
 			sourceTree = "<group>";
@@ -442,7 +451,9 @@
 				2F435DD3258C4A8D00AB02B8 /* Assets.xcassets in Resources */,
 				2F79342825A1B55800D70772 /* TimelineTableViewCell.xib in Resources */,
 				2F435DD1258C4A8B00AB02B8 /* Main.storyboard in Resources */,
+				2FE429AE25ACA5F700C66503 /* thermometer.json in Resources */,
 				2F435DF3258C5CF100AB02B8 /* orgbundID in Resources */,
+				2FC400D725AD3673003B9405 /* clockLottie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +538,7 @@
 				2FDFF68E2597927A0022C0F2 /* RTCellTableViewCell.swift in Sources */,
 				2F7049DF25A32A97007B7543 /* DiaryNoteSetViewController.swift in Sources */,
 				2FF41A112595807B006B01AC /* CoreDataHelper.swift in Sources */,
+				2F6C301D25ABE73100F8A123 /* EquipViewController.swift in Sources */,
 				2F2D15072594B3FA00CE6522 /* ReduceTimeViewController.swift in Sources */,
 				2F4C8E57259C5C5B00F551C8 /* DiaryAddNoteViewController.swift in Sources */,
 				2F0A1555259D7CB300D16BD4 /* MapViewController.swift in Sources */,

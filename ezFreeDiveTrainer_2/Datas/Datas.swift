@@ -19,3 +19,14 @@ class MapData {
     var diveSiteLat: String?
     var diveSiteLon: String?
 }
+
+class EquipData {
+    var mySuitText: String?
+    var myMaskText: String?
+    var myFinsText: String?
+    var myWeightText: String?
+    var myTempText: String?
+    var myDiveTimeText: String?
+    var circleMaxDepthText: String?
+    var circleVisibilityText: String?
+}

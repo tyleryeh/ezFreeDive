@@ -38,6 +38,7 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - GTMSessionFetcher/Full (1.5.0):
     - GTMSessionFetcher/Core (= 1.5.0)
+  - lottie-ios (3.1.9)
   - SCLAlertView (0.8)
 
 DEPENDENCIES:
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - FSCalendar
   - GoogleAPIClientForREST/Drive
   - GoogleSignIn
+  - lottie-ios
   - SCLAlertView
 
 SPEC REPOS:
@@ -60,6 +62,7 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - lottie-ios
     - SCLAlertView
 
 SPEC CHECKSUMS:
@@ -72,8 +75,9 @@ SPEC CHECKSUMS:
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 3066365238a31c65be736e705ef698fddddb7ca0
+PODFILE CHECKSUM: 3778270545c53efb95e51a2a646ec2cf32ec6a96
 
 COCOAPODS: 1.10.0

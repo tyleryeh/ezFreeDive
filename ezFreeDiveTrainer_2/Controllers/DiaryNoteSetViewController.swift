@@ -22,9 +22,14 @@ class DiaryNoteSetViewController: UIViewController {
     
     var weatherInfo = [String]()
     var mapDiveSiteData = [MapData]()
+    var equipData: EquipData?
+    
+    var screenSize:CGRect?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        screenSize = UIScreen.main.bounds
         
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
@@ -137,7 +142,7 @@ extension DiaryNoteSetViewController: UICollectionViewDataSource {
             cell.myBtn.addTarget(self, action: #selector(cameraBtn), for: .touchUpInside)
         } else if indexPath.row == 1 {
             cell.myBtn.setImage(UIImage(named: "diving"), for: .normal)
-            cell.myBtn.addTarget(self, action: #selector(divingBtn), for: .touchUpInside)
+            cell.myBtn.addTarget(self, action: #selector(divingBtn(_:)), for: .touchUpInside)
         } else if indexPath.row == 2 {
             cell.myBtn.setImage(UIImage(named: "cheeky"), for: .normal)
             cell.myBtn.addTarget(self, action: #selector(moodBtn(_:)), for: .touchUpInside)
@@ -156,8 +161,12 @@ extension DiaryNoteSetViewController: UICollectionViewDataSource {
         print("cameraBtn")
     }
     //裝備
-    @objc func divingBtn() {
+    @objc func divingBtn(_ sender: Any) {
         print("divingBtn")
+        let equipVC = storyboard?.instantiateViewController(identifier: "equipVC") as! EquipViewController
+        equipVC.delegate = self
+        equipVC.transDataForEquip = equipData
+        show(equipVC, sender: nil)
     }
     //心情
     @objc func moodBtn(_ sender: Any) {
@@ -220,7 +229,12 @@ extension DiaryNoteSetViewController: UIPopoverPresentationControllerDelegate{
 }
 
 //MARK: MoodViewControllerDelegate
-extension DiaryNoteSetViewController: MoodViewControllerDelegate, WeatherViewControllerDelegate, MapViewControllerDelegate {
+extension DiaryNoteSetViewController: MoodViewControllerDelegate, WeatherViewControllerDelegate, MapViewControllerDelegate, EquipViewControllerDelegate {
+    
+    //裝備更新
+    func didFinishUpdateEquip(update data: EquipData) {
+        equipData = data
+    }
     
     //天氣更新
     func didUpdateWeatherInfo(updateWeatherInfo: [String]) {

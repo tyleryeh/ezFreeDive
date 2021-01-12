@@ -18,12 +18,12 @@ class CircleUIView: UIView {
 //        createCircleShape(mustBeSquareView: self.bounds.maxX / 10, color1: "#d4fc79", color2: "#96e6a1")
     }
     
-    func createCircleShape(color1 c1: String, color2 c2: String) {
+    func createCircleShape(color1 c1: String, color2 c2: String, lineWidth: CGFloat) {
         
 //        let path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.bounds.width / 2)
         
         let path = UIBezierPath(arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
-                                radius: (self.bounds.width-10)/2,
+                                radius: (self.bounds.width-lineWidth)/2,
                                 startAngle: .pi*(-90)/180.0,
                                 endAngle: .pi*(270)/180.0,
                                 clockwise: true)
@@ -34,13 +34,13 @@ class CircleUIView: UIView {
         trackerLayer.path = path.cgPath
         trackerLayer.fillColor = UIColor.clear.cgColor
         trackerLayer.strokeColor = UIColor.lightGray.cgColor
-        trackerLayer.lineWidth = 10.0
+        trackerLayer.lineWidth = lineWidth
         self.layer.addSublayer(trackerLayer)
         
         shapeLayer.path = path.cgPath
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 10.0
+        shapeLayer.lineWidth = lineWidth
         shapeLayer.strokeEnd = 0
         self.layer.addSublayer(shapeLayer)
         

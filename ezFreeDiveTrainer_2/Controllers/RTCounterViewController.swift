@@ -44,7 +44,7 @@ class RTCounterViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(didFinishTimer), name: .timerFinish, object: nil)
         
-        myCircleView.createCircleShape(color1: "#d4fc79", color2: "#96e6a1")
+        myCircleView.createCircleShape(color1: "#d4fc79", color2: "#96e6a1", lineWidth: 10.0)
         
         fetchCoreData()
         

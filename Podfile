@@ -13,4 +13,5 @@ pod "FBSDKLoginKit"
 pod "FBSDKShareKit"
 pod 'FSCalendar'
 pod 'SCLAlertView'
+pod 'lottie-ios'
 end
