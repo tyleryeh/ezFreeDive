@@ -14,6 +14,14 @@ class DiaryViewController: UIViewController {
     @IBOutlet weak var myTableView: UITableView!
     
     var icons: [String] = ["bubbles", "cat-face", "hammerheadfishshape", "shark", "wave"]
+    var selectedDate = ""
+    
+    let formatterr: DateFormatter = {
+       let foramtter = DateFormatter()
+//        foramtter.timeStyle = .medium
+        foramtter.dateStyle = .medium
+        return foramtter
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +42,9 @@ class DiaryViewController: UIViewController {
         
         myTableView.backgroundColor = UIColor.clear
         
+        //到此頁面如果使用者沒有選日期，就給今天的日期
+        selectedDate = formatterr.string(from: Date())
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         myTableView.reloadData()
@@ -42,15 +53,18 @@ class DiaryViewController: UIViewController {
 //    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
 //        self.myFSCalendar?.reloadData()
 //    }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "addNote" {
+            let vc = segue.destination as! DiaryNoteSetViewController
+            vc.title = "\(selectedDate)"
+            
+        }
     }
-    */
+    
 
 }
 
@@ -69,6 +83,10 @@ extension DiaryViewController: FSCalendarDelegate{
 //                return defaultColor
 //            }
 //        }
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        //使用者選完日期，更新選擇的日期
+        selectedDate = formatterr.string(from: date)
+    }
     
     
 }

@@ -26,6 +26,10 @@ class DiaryNoteSetViewController: UIViewController {
     
     var screenSize:CGRect?
     
+    
+    let moc = CoreDataHelper.shared.managedObjectContext()
+//    var items: [DiaryData]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,23 +45,17 @@ class DiaryNoteSetViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "091EternalConstance"))
         myCollectionView.backgroundColor = UIColor.clear
         
-        //設定文字myInfoLabeForThings
-//        let content = NSMutableAttributedString(string: "蘭嶼 • ")
-//        let weaterImage = NSTextAttachment()
-//        let moodImage = NSTextAttachment()
-//
-//        weaterImage.image = UIImage(named: "sun")
-//        weaterImage.bounds = CGRect(x: 0, y: -4.5, width: 20, height: 20)
-//        content.append(NSAttributedString(attachment: weaterImage))
-//        content.append(NSAttributedString(string: " • 23°C • "))
-//
-//        moodImage.image = UIImage(named: "shock")
-//        moodImage.bounds = CGRect(x: 0, y: -4.5, width: 20, height: 20)
-//        content.append(NSAttributedString(attachment: moodImage))
-//
-//        myInfoLabelForThings.attributedText = content
+    }
+    
+    //doneBtn
+    @IBAction func doneBtnPressed(_ sender: Any) {
+        
+        //Save data to CoreData!
+        
+        
         
     }
+    
     func updateLabelForDiveSite(label: UILabel, diveSiteName: String, isLastOne: Bool, content:  NSMutableAttributedString) {
         
         let siteImage = NSTextAttachment()

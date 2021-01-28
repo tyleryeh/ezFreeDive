@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class SubFunctions {
     
@@ -14,6 +15,39 @@ class SubFunctions {
     
     private init() {
         
+    }
+    
+    //Core Data Part
+    
+    //Fetch Data
+    //TableData
+    private let moc = CoreDataHelper.shared.managedObjectContext()
+    func fetchTableData() -> [TableData] {
+        var data = [TableData]()
+        let fetchRequest = NSFetchRequest<TableData>(entityName: "TableData")
+        fetchRequest.predicate = NSPredicate(format: "whitchTable contains[cd] %@", "RT")
+        let order = NSSortDescriptor(key: "saveDate", ascending: true)
+        fetchRequest.sortDescriptors = [order]
+        moc.performAndWait {
+            do {
+                data = try moc.fetch(fetchRequest)
+            } catch {
+                data = []
+            }
+        }
+        return data
+    }
+    //DiaryData
+    func fetchDiaryData() -> [Diary]? {
+        var data: [Diary]?
+        moc.performAndWait {
+            do {
+                data = try moc.fetch(Diary.fetchRequest())
+            } catch {
+                data = []
+            }
+        }
+        return data
     }
     
     func intToStringForTimeFormatter(input: Int) -> String{

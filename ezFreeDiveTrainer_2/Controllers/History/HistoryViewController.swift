@@ -15,6 +15,8 @@ class HistoryViewController: UIViewController {
     @IBOutlet var myInnerView: UIView!
     
     var data: [TableData] = []
+    var diaryData: [Diary]?
+//    var locationData: [DiveLocation]?
     // TimelinePoint, Timeline back color, title, description, lineInfo, thumbnails, illustration
 //    var showData = [Int: [(TimelinePoint, UIColor, String, String, String?, [String]?, String?)]]()
     
@@ -37,30 +39,37 @@ class HistoryViewController: UIViewController {
         
         let timelineTableViewCellNib = UINib(nibName: "TimelineTableViewCell", bundle: Bundle(for: TimelineTableViewCell.self))
         self.myTableView.register(timelineTableViewCellNib, forCellReuseIdentifier: "cell")
-        
+//        testAddCoreData()
         fetchCoreData()
         
+    }
+    
+    func testAddCoreData() {
+        let moc = CoreDataHelper.shared.managedObjectContext()
+        let diary = Diary(context: moc)
+        diary.diaryId = UUID().uuidString
+
+        let location = Location(context: moc)
+        location.name = "我是測試一號"
+        location.lon = "23.4444"
+        location.lat = "6666223"
+        let locationObjc2 = Location(context: moc)
+        locationObjc2.name = "我是測試二號"
+        locationObjc2.lon = "36"
+        locationObjc2.lat = "6688"
+        
+        diary.addToToLocation(NSSet(array: [location, locationObjc2]))
+
+        CoreDataHelper.shared.saveContext()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
-        fetchCoreData()
-        self.myTableView.reloadData()
     }
     
     func fetchCoreData() {
-        let moc = CoreDataHelper.shared.managedObjectContext()
-        let fetchRequest = NSFetchRequest<TableData>(entityName: "TableData")
-        fetchRequest.predicate = NSPredicate(format: "whitchTable contains[cd] %@", "RT")
-        let order = NSSortDescriptor(key: "saveDate", ascending: true)
-        fetchRequest.sortDescriptors = [order]
-        moc.performAndWait {
-            do {
-                self.data = try moc.fetch(fetchRequest)
-            }catch {
-                self.data = []
-            }
-        }
+        self.data = SubFunctions.shared.fetchTableData()
+        self.diaryData = SubFunctions.shared.fetchDiaryData()
     }
 
     /*
@@ -92,42 +101,11 @@ extension HistoryViewController: UITableViewDataSource {
         case 0:
             return self.data.count
         case 1:
-            return 1
+            return self.diaryData?.count ?? 0
         default:
-            return 1
+            return 0
         }
     }
-    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0:
-//            return "RT"
-//        case 1:
-//            return "RS"
-//        default:
-//            return "Diary"
-//        }
-//    }
-    
-//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        guard let headerView = view as? UITableViewHeaderFooterView else { return }
-//        
-//        switch section {
-//        case 0:
-////            headerView.backgroundView?.backgroundColor = .red
-////            headerView.backgroundColor = UIColor.red
-////            headerView.textLabel?.textColor = .blue
-//            view.backgroundColor = UIColor.yellow
-//            
-//        case 1:
-//            headerView.backgroundView?.backgroundColor = .yellow
-//            headerView.backgroundColor = .yellow
-//            headerView.textLabel?.textColor = .blue
-//        default:
-//            return
-//        }
-//        
-//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TimelineTableViewCell
@@ -135,17 +113,15 @@ extension HistoryViewController: UITableViewDataSource {
         cell.backgroundColor = UIColor.clear
         cell.bubbleColor = UIColor.clear
         cell.bubbleEnabled = false
-//        cell.titleLabel.font = UIFont.systemFont(ofSize: 26)
         cell.titleLabel.font = UIFont.init(name: "Chalkboard SE Regular", size: 26)
         cell.descriptionLabel.font = UIFont.systemFont(ofSize: 14)
-//        cell.descriptionLabel.numberOfLines = 0
         cell.timeline.width = 3.5
         cell.timelinePoint = TimelinePoint(diameter: 10, lineWidth: 1, color: UIColor.black, filled: true)
         
         cell.timeline.leftMargin = tableView.bounds.width * 0.18
         
         
-        
+        //時間軸設定
         if indexPath.row == 0 {
             cell.timeline.backColor = UIColor.black  //時間軸的線
             cell.timeline.frontColor = UIColor.clear //圓點連接處
@@ -165,18 +141,40 @@ extension HistoryViewController: UITableViewDataSource {
                 return cell
             }
             cell.titleLabel.text = self.data[indexPath.row].tableName
-//            cell.descriptionLabel.text = "BreathTime: \(breath), HoldTime: \(hold), Set: \(set)                                                                                                                   magna aliqua."
-//            cell.descriptionLabel.text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             cell.descriptionLabel.text = "BreathTime: \(breath), HoldTime: \(hold), Set: \(set)"
             if indexPath.row == 0 {
                 cell.illustrationImageView.image = UIImage(named: "wallclock")
                 cell.illustrationSize.constant = 40
                 cell.viewsInStackView = [UIImageView(image: UIImage(named: "wallclock"))]
             }
-            
             return cell
         case 1:
-            return cell
+            
+            if let array = self.diaryData?[indexPath.row],
+               let locationArray = array.toLocation?.allObjects as? [Location] {
+                
+                cell.titleLabel.text = array.diaryId
+                if locationArray.count != 0 {
+                    var descriptionLabelText = ""
+                    for i in 0..<locationArray.count {
+                        if let name = locationArray[i].name,
+                           let lon = locationArray[i].lon,
+                           let lat = locationArray[i].lat {
+                            descriptionLabelText.append(name)
+                            descriptionLabelText.append(",")
+                            descriptionLabelText.append(lon)
+                            descriptionLabelText.append(",")
+                            descriptionLabelText.append(lat)
+                        } else {
+                            print("No cell Data!")
+                        }
+                    }
+                    cell.descriptionLabel.text = descriptionLabelText
+                }
+                return cell
+            } else {
+                return cell
+            }
         default:
             return cell
         }

@@ -873,7 +873,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ffl-6M-MEW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Rod-bI-zvT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Rod-bI-zvT">
+                            <connections>
+                                <action selector="doneBtnPressed:" destination="fby-SU-Y85" id="NA7-GI-dh4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="myCollectionVIewLayout" destination="vBX-DP-Mpk" id="dVf-T5-aBV"/>
