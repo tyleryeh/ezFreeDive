@@ -85,6 +85,8 @@ class EquipViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
         //AnimationViewSetting
         thermometerAnimationView.frame = thermometerLottieView.bounds
         thermometerAnimationView.animation = Animation.named("thermometer")
@@ -283,11 +285,6 @@ class EquipViewController: UIViewController {
             
             let alertView = SCLAlertView(appearance: appearance)
             alertView.view.backgroundColor = UIColor.clear
-            alertView.addButton("Leave") {
-//                let data = EquipData()
-//                self.delegate?.didFinishUpdateEquip(update: data)
-                self.navigationController?.popViewController(animated: true)
-            }
             alertView.showNotice("You missed something~", subTitle: "🌟",closeButtonTitle: "Ok", circleIconImage: #imageLiteral(resourceName: "wave"))
             
         } else {

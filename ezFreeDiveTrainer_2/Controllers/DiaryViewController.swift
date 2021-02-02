@@ -54,6 +54,17 @@ class DiaryViewController: UIViewController {
 //        self.myFSCalendar?.reloadData()
 //    }
     
+    func newObjectAttributeForEquip(data: Diary) {
+        data.eSuit = ""
+        data.eMask = ""
+        data.eFins = ""
+        data.eWeight = ""
+        data.eVisibility = ""
+        data.eMaxDepth = ""
+        data.eDiveTime = ""
+        data.eWaterTemp = ""
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -61,6 +72,18 @@ class DiaryViewController: UIViewController {
         if segue.identifier == "addNote" {
             let vc = segue.destination as! DiaryNoteSetViewController
             vc.title = "\(selectedDate)"
+            
+            //創新物件，傳過去
+            let moc = CoreDataHelper.shared.managedObjectContext()
+            let diary = Diary(context: moc)
+            diary.diaryId = UUID().uuidString
+            diary.diaryDate = selectedDate
+            newObjectAttributeForEquip(data: diary)
+            CoreDataHelper.shared.saveContext()
+            
+            if let uuid = diary.diaryId {
+                vc.uuidString = uuid
+            }
             
         }
     }

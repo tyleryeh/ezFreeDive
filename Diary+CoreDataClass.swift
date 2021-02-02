@@ -2,7 +2,7 @@
 //  Diary+CoreDataClass.swift
 //  ezFreeDiveTrainer_2
 //
-//  Created by Che Chang Yeh on 2021/1/28.
+//  Created by Che Chang Yeh on 2021/2/1.
 //
 //
 

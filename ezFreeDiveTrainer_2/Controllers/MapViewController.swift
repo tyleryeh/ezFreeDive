@@ -98,10 +98,6 @@ class MapViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super .viewWillDisappear(animated)
         var divesites = ""
-        for i in 0..<delegateData.count {
-            divesites.append(delegateData[i].diveSiteName ?? "?")
-            if i == delegateData.count - 1{ divesites.append("") } else {divesites.append(", ")}
-        }
         
         let appearance = SCLAlertView.SCLAppearance(
             kCircleIconHeight: 30,
@@ -114,7 +110,17 @@ class MapViewController: UIViewController {
         let alertView = SCLAlertView(appearance: appearance)
         alertView.view.backgroundColor = UIColor.clear
         alertView.addButton("Ok", target: self, selector: #selector(tranceDatatoNoteSetView))
+        
+        for i in 0..<delegateData.count {
+            divesites.append(delegateData[i].diveSiteName ?? "?")
+            if i == delegateData.count - 1{ divesites.append("") } else {divesites.append(", ")}
+        }
+        
         alertView.showSuccess("Do you want to save these lovely dive sites ?", subTitle: "\(divesites)", closeButtonTitle: "Cancel", circleIconImage: #imageLiteral(resourceName: "cat-face"))
+    }
+    
+    @objc func backAlertAction() {
+        
     }
     
     @objc func tranceDatatoNoteSetView() {

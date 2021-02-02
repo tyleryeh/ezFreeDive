@@ -854,22 +854,58 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4a-EL-lY2">
+                                <rect key="frame" x="16" y="226" width="343" height="376"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mu9-6i-Bjb">
+                                        <rect key="frame" x="8" y="8" width="327" height="360"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NWd-mi-2yE">
+                                                <rect key="frame" x="8" y="8" width="311" height="344"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NWd-mi-2yE" secondAttribute="bottom" constant="8" id="Apo-zB-mEg"/>
+                                            <constraint firstItem="NWd-mi-2yE" firstAttribute="top" secondItem="mu9-6i-Bjb" secondAttribute="top" constant="8" id="GLF-JI-IU9"/>
+                                            <constraint firstAttribute="trailing" secondItem="NWd-mi-2yE" secondAttribute="trailing" constant="8" id="UfY-AH-nl9"/>
+                                            <constraint firstItem="NWd-mi-2yE" firstAttribute="leading" secondItem="mu9-6i-Bjb" secondAttribute="leading" constant="8" id="oI6-au-IZc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mu9-6i-Bjb" secondAttribute="bottom" constant="8" id="4HV-d6-LqI"/>
+                                    <constraint firstItem="mu9-6i-Bjb" firstAttribute="top" secondItem="Y4a-EL-lY2" secondAttribute="top" constant="8" id="CUc-ko-7Ul"/>
+                                    <constraint firstItem="mu9-6i-Bjb" firstAttribute="leading" secondItem="Y4a-EL-lY2" secondAttribute="leading" constant="8" id="dLz-vg-hsM"/>
+                                    <constraint firstAttribute="trailing" secondItem="mu9-6i-Bjb" secondAttribute="trailing" constant="8" id="etH-8h-tUZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BSN-ai-FbZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="Y4a-EL-lY2" secondAttribute="trailing" constant="16" id="7WY-qK-0ZG"/>
+                            <constraint firstItem="Y4a-EL-lY2" firstAttribute="top" secondItem="J4R-8p-yic" secondAttribute="bottom" constant="20" id="ANc-V2-ieb"/>
                             <constraint firstItem="WNl-TX-UhX" firstAttribute="top" secondItem="WLs-Cr-lpv" secondAttribute="bottom" constant="6" id="Arg-K7-dko"/>
                             <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="WNl-TX-UhX" secondAttribute="trailing" constant="16" id="CZB-Sk-Cjr"/>
                             <constraint firstItem="MK8-ty-Wi7" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" id="IrW-uh-qvI"/>
                             <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="WLs-Cr-lpv" secondAttribute="trailing" constant="16" id="JLL-6p-JUJ"/>
                             <constraint firstItem="WLs-Cr-lpv" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" constant="16" id="Rbr-LM-uVL"/>
                             <constraint firstItem="J4R-8p-yic" firstAttribute="top" secondItem="WNl-TX-UhX" secondAttribute="bottom" constant="6" id="TYN-cf-hvZ"/>
+                            <constraint firstItem="BSN-ai-FbZ" firstAttribute="bottom" secondItem="Y4a-EL-lY2" secondAttribute="bottom" constant="16" id="VEm-A8-YCl"/>
                             <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="J4R-8p-yic" secondAttribute="trailing" constant="16" id="Ye6-K9-U4n"/>
                             <constraint firstItem="BSN-ai-FbZ" firstAttribute="trailing" secondItem="MK8-ty-Wi7" secondAttribute="trailing" id="Yjx-mz-euS"/>
                             <constraint firstItem="MK8-ty-Wi7" firstAttribute="top" secondItem="BSN-ai-FbZ" secondAttribute="top" constant="8" id="dpI-Og-Pin"/>
                             <constraint firstItem="J4R-8p-yic" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" constant="16" id="fpo-3Y-z0x"/>
                             <constraint firstItem="WNl-TX-UhX" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" constant="16" id="gbt-9Z-fh2"/>
                             <constraint firstItem="WLs-Cr-lpv" firstAttribute="top" secondItem="MK8-ty-Wi7" secondAttribute="bottom" constant="8" id="jWt-jL-7Ll"/>
+                            <constraint firstItem="Y4a-EL-lY2" firstAttribute="leading" secondItem="BSN-ai-FbZ" secondAttribute="leading" constant="16" id="k1J-Sf-bzA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ffl-6M-MEW">
@@ -880,17 +916,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="diaryNameTextField" destination="6wr-Er-78B" id="eEv-R6-6Fn"/>
                         <outlet property="myCollectionVIewLayout" destination="vBX-DP-Mpk" id="dVf-T5-aBV"/>
                         <outlet property="myCollectionView" destination="MK8-ty-Wi7" id="hOJ-Od-2un"/>
                         <outlet property="myInfoLabelForDiveSite" destination="WNl-TX-UhX" id="uVl-7v-uul"/>
                         <outlet property="myInfoLabelForThings" destination="WLs-Cr-lpv" id="gmj-tp-okk"/>
+                        <outlet property="myInnerView" destination="mu9-6i-Bjb" id="5Rc-iZ-XUS"/>
+                        <outlet property="myTextView" destination="NWd-mi-2yE" id="zO8-P8-ryO"/>
+                        <outlet property="myshadowView" destination="Y4a-EL-lY2" id="GsW-hC-SOt"/>
                         <segue destination="hV1-OD-4Zk" kind="show" identifier="diveSiteSegue" id="vVv-Em-OuQ"/>
                         <segue destination="giG-C2-BUE" kind="show" id="WXf-gb-bon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcr-Nc-hG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3430" y="2857"/>
+            <point key="canvasLocation" x="3429.5999999999999" y="2856.521739130435"/>
         </scene>
         <!--Diary View Controller-->
         <scene sceneID="tbl-Og-vwU">
@@ -1162,7 +1202,7 @@
         <!--Counter View Controller-->
         <scene sceneID="p2U-KY-GLX">
             <objects>
-                <viewController id="6sb-ku-ZG3" customClass="RTCounterViewController" customModule="ezFreeDiveTrainer_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rtCounterVC" id="6sb-ku-ZG3" customClass="RTCounterViewController" customModule="ezFreeDiveTrainer_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xcu-EH-drJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1965,6 +2005,9 @@
         <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="sun.min.fill" catalog="system" width="128" height="121"/>
         <image name="timer" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,6 +7,13 @@
 
 import Foundation
 
+class DiaryData {
+    var diaryID: String?
+    var diaryName: String?
+    var diaryTextView: String?
+    var moodImage: String?
+}
+
 class WeatherData {
     var location: String?
     var weater: String?

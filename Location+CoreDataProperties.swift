@@ -2,7 +2,7 @@
 //  Location+CoreDataProperties.swift
 //  ezFreeDiveTrainer_2
 //
-//  Created by Che Chang Yeh on 2021/1/28.
+//  Created by Che Chang Yeh on 2021/2/1.
 //
 //
 
@@ -16,9 +16,9 @@ extension Location {
         return NSFetchRequest<Location>(entityName: "Location")
     }
 
-    @NSManaged public var name: String?
-    @NSManaged public var lon: String?
     @NSManaged public var lat: String?
+    @NSManaged public var lon: String?
+    @NSManaged public var name: String?
     @NSManaged public var toDiary: Diary?
 
 }

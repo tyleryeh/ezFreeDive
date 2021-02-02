@@ -109,7 +109,7 @@ class RTCounterViewController: UIViewController {
     @objc func upDateCircle() {
         textUpdate()
     }
-    //timer會一直叫
+    //timer會一直呼叫
     func textUpdate() {
         if duration < 1 {
             //Stop timer

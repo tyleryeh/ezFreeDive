@@ -39,37 +39,17 @@ class HistoryViewController: UIViewController {
         
         let timelineTableViewCellNib = UINib(nibName: "TimelineTableViewCell", bundle: Bundle(for: TimelineTableViewCell.self))
         self.myTableView.register(timelineTableViewCellNib, forCellReuseIdentifier: "cell")
-//        testAddCoreData()
-        fetchCoreData()
-        
-    }
-    
-    func testAddCoreData() {
-        let moc = CoreDataHelper.shared.managedObjectContext()
-        let diary = Diary(context: moc)
-        diary.diaryId = UUID().uuidString
-
-        let location = Location(context: moc)
-        location.name = "我是測試一號"
-        location.lon = "23.4444"
-        location.lat = "6666223"
-        let locationObjc2 = Location(context: moc)
-        locationObjc2.name = "我是測試二號"
-        locationObjc2.lon = "36"
-        locationObjc2.lat = "6688"
-        
-        diary.addToToLocation(NSSet(array: [location, locationObjc2]))
-
-        CoreDataHelper.shared.saveContext()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
+        fetchCoreData()
     }
     
     func fetchCoreData() {
         self.data = SubFunctions.shared.fetchTableData()
         self.diaryData = SubFunctions.shared.fetchDiaryData()
+        self.myTableView.reloadData()
     }
 
     /*
@@ -87,6 +67,25 @@ class HistoryViewController: UIViewController {
 extension HistoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        switch indexPath.section {
+        case 0:
+            let vc = storyboard?.instantiateViewController(identifier: "rtCounterVC") as! RTCounterViewController
+            if let tableName = self.data[indexPath.row].tableName {
+                vc.catchTableName = tableName
+                self.show(vc, sender: nil)
+            }
+        case 1:
+            if let uuid = self.diaryData?[indexPath.row].diaryId {
+                let vc = storyboard?.instantiateViewController(identifier: "diaryNoteVC") as! DiaryNoteSetViewController
+                vc.uuidString = uuid
+                self.show(vc, sender: nil)
+            } else {
+                //show alert
+                print("Section 1")
+            }
+        default:
+            print("Error section selected")
+        }
     }
 }
 
@@ -118,7 +117,7 @@ extension HistoryViewController: UITableViewDataSource {
         cell.timeline.width = 3.5
         cell.timelinePoint = TimelinePoint(diameter: 10, lineWidth: 1, color: UIColor.black, filled: true)
         
-        cell.timeline.leftMargin = tableView.bounds.width * 0.18
+        cell.timeline.leftMargin = tableView.bounds.width * 0.24
         
         
         //時間軸設定
@@ -150,27 +149,15 @@ extension HistoryViewController: UITableViewDataSource {
             return cell
         case 1:
             
-            if let array = self.diaryData?[indexPath.row],
-               let locationArray = array.toLocation?.allObjects as? [Location] {
+            if let data = self.diaryData?[indexPath.row] {
                 
-                cell.titleLabel.text = array.diaryId
-                if locationArray.count != 0 {
-                    var descriptionLabelText = ""
-                    for i in 0..<locationArray.count {
-                        if let name = locationArray[i].name,
-                           let lon = locationArray[i].lon,
-                           let lat = locationArray[i].lat {
-                            descriptionLabelText.append(name)
-                            descriptionLabelText.append(",")
-                            descriptionLabelText.append(lon)
-                            descriptionLabelText.append(",")
-                            descriptionLabelText.append(lat)
-                        } else {
-                            print("No cell Data!")
-                        }
-                    }
-                    cell.descriptionLabel.text = descriptionLabelText
-                }
+                cell.titleLabel.text = data.diaryName
+                cell.illustrationImageView.image = UIImage(named: SubFunctions.shared.weatherImageView(value: data.placeWeatherName))
+                cell.illustrationSize.constant = 36
+                
+                SubFunctions.shared.updateLabelForThings(label: cell.descriptionLabel, location: data.placeName ?? "", weather: "", temMax: data.placeTempMax ?? "", temMin: data.placeTempMin ?? "", moodemoji: data.moodName ?? "")
+                
+                
                 return cell
             } else {
                 return cell
