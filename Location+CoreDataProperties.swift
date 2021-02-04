@@ -2,7 +2,7 @@
 //  Location+CoreDataProperties.swift
 //  ezFreeDiveTrainer_2
 //
-//  Created by Che Chang Yeh on 2021/2/1.
+//  Created by Che Chang Yeh on 2021/2/3.
 //
 //
 

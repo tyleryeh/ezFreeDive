@@ -86,13 +86,34 @@ class MapViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }else if locationManager.authorizationStatus == .denied {
-            let alert = UIAlertController(title: "定位權限已關閉", message: "如要變更權限，請至 設定 > 隱私權 > 定位服務 開啟", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "確認", style: .default, handler:nil)
-            alert.addAction(okAction)
-            self.present(alert, animated: true, completion: nil)
+//            let alert = UIAlertController(title: "定位權限已關閉", message: "如要變更權限，請至 設定 > 隱私權 > 定位服務 開啟", preferredStyle: .alert)
+//            let okAction = UIAlertAction(title: "確認", style: .default, handler:nil)
+//            alert.addAction(okAction)
+//            self.present(alert, animated: true, completion: nil)
+            
+            let appearance = SCLAlertView.SCLAppearance(
+                kCircleIconHeight: 30,
+                kTitleFont: UIFont(name: "Chalkboard SE Regular", size: 22)!,
+                kTextFont: UIFont(name: "Chalkboard SE Regular", size: 12)!,
+                kButtonFont: UIFont(name: "Chalkboard SE Regular", size: 14)!,
+                contentViewCornerRadius: 20
+            )
+            
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.view.backgroundColor = UIColor.clear
+//            alertView.addButton("Go to Setting", target: self, selector: #selector(goToSettingLocation))
+            
+            alertView.showSuccess("Location Permission Required", subTitle: "🌟", closeButtonTitle: "Ok", circleIconImage: #imageLiteral(resourceName: "cat-face"))
+            
+            
+            
         }else if locationManager.authorizationStatus == .authorizedWhenInUse {
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    @objc func goToSettingLocation() {
+        navigationController?.popViewController(animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

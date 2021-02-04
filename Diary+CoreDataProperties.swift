@@ -2,7 +2,7 @@
 //  Diary+CoreDataProperties.swift
 //  ezFreeDiveTrainer_2
 //
-//  Created by Che Chang Yeh on 2021/2/1.
+//  Created by Che Chang Yeh on 2021/2/3.
 //
 //
 
@@ -16,6 +16,7 @@ extension Diary {
         return NSFetchRequest<Diary>(entityName: "Diary")
     }
 
+    @NSManaged public var diaryDate: String?
     @NSManaged public var diaryId: String?
     @NSManaged public var diaryName: String?
     @NSManaged public var diaryTextView: String?
@@ -32,7 +33,7 @@ extension Diary {
     @NSManaged public var placeTempMax: String?
     @NSManaged public var placeTempMin: String?
     @NSManaged public var placeWeatherName: String?
-    @NSManaged public var diaryDate: String?
+    @NSManaged public var saveDate: String?
     @NSManaged public var toLocation: NSSet?
 
 }

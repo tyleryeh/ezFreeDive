@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F025D4B25C800D9001AAB2F /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F025D4725C800D9001AAB2F /* Location+CoreDataClass.swift */; };
-		2F025D4C25C800D9001AAB2F /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F025D4825C800D9001AAB2F /* Location+CoreDataProperties.swift */; };
-		2F025D4D25C800D9001AAB2F /* Diary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F025D4925C800D9001AAB2F /* Diary+CoreDataClass.swift */; };
-		2F025D4E25C800D9001AAB2F /* Diary+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F025D4A25C800D9001AAB2F /* Diary+CoreDataProperties.swift */; };
 		2F0A1555259D7CB300D16BD4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A1554259D7CB300D16BD4 /* MapViewController.swift */; };
 		2F0A61AA2591E3690006BFE9 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */; };
 		2F0A61AE2591E3880006BFE9 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */; };
@@ -53,6 +49,10 @@
 		2FC400D725AD3673003B9405 /* clockLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 2FC400D625AD3673003B9405 /* clockLottie.json */; };
 		2FC556CF25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */; };
 		2FCC0E5F259A69B400A47376 /* TrainingModeCell2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC0E5E259A69B400A47376 /* TrainingModeCell2TableViewCell.swift */; };
+		2FCFE48325CADCDA007FE8F9 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCFE47F25CADCDA007FE8F9 /* Location+CoreDataClass.swift */; };
+		2FCFE48425CADCDA007FE8F9 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCFE48025CADCDA007FE8F9 /* Location+CoreDataProperties.swift */; };
+		2FCFE48525CADCDA007FE8F9 /* Diary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCFE48125CADCDA007FE8F9 /* Diary+CoreDataClass.swift */; };
+		2FCFE48625CADCDA007FE8F9 /* Diary+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCFE48225CADCDA007FE8F9 /* Diary+CoreDataProperties.swift */; };
 		2FDFF68E2597927A0022C0F2 /* RTCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF68D2597927A0022C0F2 /* RTCellTableViewCell.swift */; };
 		2FDFF69225979C5E0022C0F2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF69025979C5E0022C0F2 /* Model.xcdatamodeld */; };
 		2FDFF69925979D630022C0F2 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFF69825979D630022C0F2 /* TableData.swift */; };
@@ -71,10 +71,6 @@
 
 /* Begin PBXFileReference section */
 		117AB83AEA8FAE734314CB2E /* Pods-ezFreeDiveTrainer_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ezFreeDiveTrainer_2.debug.xcconfig"; path = "Target Support Files/Pods-ezFreeDiveTrainer_2/Pods-ezFreeDiveTrainer_2.debug.xcconfig"; sourceTree = "<group>"; };
-		2F025D4725C800D9001AAB2F /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2F025D4825C800D9001AAB2F /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		2F025D4925C800D9001AAB2F /* Diary+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2F025D4A25C800D9001AAB2F /* Diary+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		2F0A1554259D7CB300D16BD4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		2F0A61A92591E3690006BFE9 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		2F0A61AD2591E3880006BFE9 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +116,10 @@
 		2FC400D625AD3673003B9405 /* clockLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clockLottie.json; sourceTree = "<group>"; };
 		2FC556CE25A38DAF001F7876 /* DiaryMyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMyCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FCC0E5E259A69B400A47376 /* TrainingModeCell2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeCell2TableViewCell.swift; sourceTree = "<group>"; };
+		2FCFE47F25CADCDA007FE8F9 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		2FCFE48025CADCDA007FE8F9 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		2FCFE48125CADCDA007FE8F9 /* Diary+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		2FCFE48225CADCDA007FE8F9 /* Diary+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		2FDFF68D2597927A0022C0F2 /* RTCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCellTableViewCell.swift; sourceTree = "<group>"; };
 		2FDFF69125979C5E0022C0F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		2FDFF69825979D630022C0F2 /* TableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
@@ -237,10 +237,10 @@
 		2F2D15182595782D00CE6522 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
-				2F025D4725C800D9001AAB2F /* Location+CoreDataClass.swift */,
-				2F025D4825C800D9001AAB2F /* Location+CoreDataProperties.swift */,
-				2F025D4925C800D9001AAB2F /* Diary+CoreDataClass.swift */,
-				2F025D4A25C800D9001AAB2F /* Diary+CoreDataProperties.swift */,
+				2FCFE47F25CADCDA007FE8F9 /* Location+CoreDataClass.swift */,
+				2FCFE48025CADCDA007FE8F9 /* Location+CoreDataProperties.swift */,
+				2FCFE48125CADCDA007FE8F9 /* Diary+CoreDataClass.swift */,
+				2FCFE48225CADCDA007FE8F9 /* Diary+CoreDataProperties.swift */,
 				2FDFF69825979D630022C0F2 /* TableData.swift */,
 				2F9B575925A470FC00F527CC /* Datas.swift */,
 			);
@@ -546,10 +546,10 @@
 				2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */,
 				2FDFF68E2597927A0022C0F2 /* RTCellTableViewCell.swift in Sources */,
 				2F7049DF25A32A97007B7543 /* DiaryNoteSetViewController.swift in Sources */,
-				2F025D4C25C800D9001AAB2F /* Location+CoreDataProperties.swift in Sources */,
-				2F025D4B25C800D9001AAB2F /* Location+CoreDataClass.swift in Sources */,
+				2FCFE48425CADCDA007FE8F9 /* Location+CoreDataProperties.swift in Sources */,
+				2FCFE48325CADCDA007FE8F9 /* Location+CoreDataClass.swift in Sources */,
 				2FF41A112595807B006B01AC /* CoreDataHelper.swift in Sources */,
-				2F025D4E25C800D9001AAB2F /* Diary+CoreDataProperties.swift in Sources */,
+				2FCFE48625CADCDA007FE8F9 /* Diary+CoreDataProperties.swift in Sources */,
 				2F6C301D25ABE73100F8A123 /* EquipViewController.swift in Sources */,
 				2F2D15072594B3FA00CE6522 /* ReduceTimeViewController.swift in Sources */,
 				2F4C8E57259C5C5B00F551C8 /* DiaryAddNoteViewController.swift in Sources */,
@@ -566,7 +566,7 @@
 				2FF41A2625958E50006B01AC /* RTSetViewController.swift in Sources */,
 				2F202A2625A551CB0093CD73 /* MoodViewController.swift in Sources */,
 				2F9B575725A45F1300F527CC /* WeatherViewController.swift in Sources */,
-				2F025D4D25C800D9001AAB2F /* Diary+CoreDataClass.swift in Sources */,
+				2FCFE48525CADCDA007FE8F9 /* Diary+CoreDataClass.swift in Sources */,
 				2F435DCC258C4A8B00AB02B8 /* SceneDelegate.swift in Sources */,
 				2F0A61AA2591E3690006BFE9 /* TrainingViewController.swift in Sources */,
 				2FF41A17259581AF006B01AC /* RTBTimerViewController.swift in Sources */,

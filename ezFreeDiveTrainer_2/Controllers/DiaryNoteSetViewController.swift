@@ -31,6 +31,12 @@ class DiaryNoteSetViewController: UIViewController {
     
     var uuidString = ""
     var diaryData: [Diary]?
+    let formatterr: DateFormatter = {
+       let foramtter = DateFormatter()
+        foramtter.timeStyle = .medium
+        foramtter.dateStyle = .medium
+        return foramtter
+    }()
     
     var screenSize:CGRect?
     
@@ -179,6 +185,7 @@ class DiaryNoteSetViewController: UIViewController {
         dataArray[0].diaryName = diaryNameTextField.text
         dataArray[0].diaryTextView = myTextView.text
         dataArray[0].diaryDate = self.title! //格式要改排序
+        dataArray[0].saveDate = formatterr.string(from: Date())
         
         //MARK: 檢查裝備有沒有輸入完成
         if equipData != nil {
@@ -375,9 +382,9 @@ extension DiaryNoteSetViewController: MoodViewControllerDelegate, WeatherViewCon
                 array[0].eMask = eData.myMaskText
                 array[0].eFins = eData.myFinsText
                 array[0].eWeight = eData.myWeightText
-                array[0].eMaxDepth = eData.myMaskText
+                array[0].eMaxDepth = eData.circleMaxDepthText
                 array[0].eVisibility = eData.circleVisibilityText
-                array[0].eDiveTime = eData.circleMaxDepthText
+                array[0].eDiveTime = eData.myDiveTimeText
                 array[0].eWaterTemp = eData.myTempText
             } else {
                 print("No diaryData for equ")

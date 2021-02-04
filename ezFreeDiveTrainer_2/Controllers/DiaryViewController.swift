@@ -13,8 +13,9 @@ class DiaryViewController: UIViewController {
     @IBOutlet weak var myFSCalendar: FSCalendar!
     @IBOutlet weak var myTableView: UITableView!
     
-    var icons: [String] = ["bubbles", "cat-face", "hammerheadfishshape", "shark", "wave"]
+    var icons: [String] = ["bubbles", "cat-face", "hammerheadfishshape", "shark", "wave", "buoy"]
     var selectedDate = ""
+    var showData: [Diary]?
     
     let formatterr: DateFormatter = {
        let foramtter = DateFormatter()
@@ -46,8 +47,14 @@ class DiaryViewController: UIViewController {
         selectedDate = formatterr.string(from: Date())
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        myTableView.reloadData()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchCoreData()
+    }
+    
+    func fetchCoreData() {
+        self.showData = SubFunctions.shared.fetchDiaryDataDate(date: selectedDate)
+        self.myTableView.reloadData()
     }
     
 //    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -109,6 +116,7 @@ extension DiaryViewController: FSCalendarDelegate{
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         //使用者選完日期，更新選擇的日期
         selectedDate = formatterr.string(from: date)
+        fetchCoreData()
     }
     
     
@@ -121,22 +129,38 @@ extension DiaryViewController: FSCalendarDataSource{
 extension DiaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let uuid = self.showData?[indexPath.row].diaryId {
+            let vc = storyboard?.instantiateViewController(identifier: "diaryNoteVC") as! DiaryNoteSetViewController
+            vc.uuidString = uuid
+            self.show(vc, sender: nil)
+        } else {
+            print("No uuid in calendar.")
+        }
+        
     }
 }
 
 extension DiaryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return showData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DiaryCellTableViewCell
-        cell.myLabel.text = "小琉球海訓"
-        let randomIndex = Int.random(in: 0..<icons.count)
-        cell.myImageView.image = UIImage(named: icons[randomIndex])
         cell.selectionStyle = .none
         cell.backgroundColor = UIColor.clear
-        return cell
+        
+        guard let array = self.showData else {return cell}
+        if array.count != 0 {
+            cell.myLabel.text = array[indexPath.row].diaryName
+            let randomIndex = Int.random(in: 0..<icons.count)
+            cell.myImageView.image = UIImage(named: icons[randomIndex])
+            return cell
+        } else {
+            return cell
+        }
+        
     }
 
 }

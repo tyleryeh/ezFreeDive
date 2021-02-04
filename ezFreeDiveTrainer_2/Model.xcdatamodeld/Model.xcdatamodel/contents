@@ -18,6 +18,7 @@
         <attribute name="placeTempMax" optional="YES" attributeType="String"/>
         <attribute name="placeTempMin" optional="YES" attributeType="String"/>
         <attribute name="placeWeatherName" optional="YES" attributeType="String"/>
+        <attribute name="saveDate" optional="YES" attributeType="String"/>
         <relationship name="toLocation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Location" inverseName="toDiary" inverseEntity="Location"/>
     </entity>
     <entity name="Location" representedClassName=".Location" syncable="YES">
@@ -37,7 +38,7 @@
         <attribute name="whitchTable" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Diary" positionX="-405" positionY="36" width="128" height="299"/>
+        <element name="Diary" positionX="-405" positionY="36" width="128" height="314"/>
         <element name="Location" positionX="-396" positionY="45" width="128" height="89"/>
         <element name="TableData" positionX="-408.0410766601562" positionY="-28.83787536621094" width="128" height="163"/>
     </elements>

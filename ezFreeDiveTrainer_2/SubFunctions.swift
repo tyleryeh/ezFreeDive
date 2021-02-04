@@ -26,7 +26,7 @@ class SubFunctions {
         var data = [TableData]()
         let fetchRequest = NSFetchRequest<TableData>(entityName: "TableData")
         fetchRequest.predicate = NSPredicate(format: "whitchTable contains[cd] %@", "RT")
-        let order = NSSortDescriptor(key: "saveDate", ascending: true)
+        let order = NSSortDescriptor(key: "saveDate", ascending: false)
         fetchRequest.sortDescriptors = [order]
         moc.performAndWait {
             do {
@@ -40,9 +40,12 @@ class SubFunctions {
     //DiaryData
     func fetchDiaryData() -> [Diary]? {
         var data: [Diary]?
+        let fetchRequest = Diary.fetchRequest() as NSFetchRequest<Diary>
+        let order = NSSortDescriptor(key: "saveDate", ascending: false)
+        fetchRequest.sortDescriptors = [order]
         moc.performAndWait {
             do {
-                data = try moc.fetch(Diary.fetchRequest())
+                data = try moc.fetch(fetchRequest)
             } catch {
                 data = []
             }
@@ -50,10 +53,28 @@ class SubFunctions {
         return data
     }
     //DiaryData for uuid
-    func fetchDiaryDataUUID(uuid :String) -> [Diary]? {
+    func fetchDiaryDataUUID(uuid: String) -> [Diary]? {
         var data: [Diary]?
         let fetchRequest = NSFetchRequest<Diary>(entityName: "Diary")
         fetchRequest.predicate = NSPredicate(format: "diaryId contains[cd] %@", uuid)
+        let order = NSSortDescriptor(key: "saveDate", ascending: false)
+        fetchRequest.sortDescriptors = [order]
+        moc.performAndWait {
+            do {
+                data = try moc.fetch(fetchRequest)
+            } catch {
+                data = []
+            }
+        }
+        return data
+    }
+    //DiaryData for selected date
+    func fetchDiaryDataDate(date: String) -> [Diary]? {
+        var data: [Diary]?
+        let fetchRequest = NSFetchRequest<Diary>(entityName: "Diary")
+        fetchRequest.predicate = NSPredicate(format: "diaryDate contains[cd] %@", date)
+        let order = NSSortDescriptor(key: "saveDate", ascending: false)
+        fetchRequest.sortDescriptors = [order]
         moc.performAndWait {
             do {
                 data = try moc.fetch(fetchRequest)
