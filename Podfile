@@ -14,4 +14,7 @@ pod "FBSDKShareKit"
 pod 'FSCalendar'
 pod 'SCLAlertView'
 pod 'lottie-ios'
+pod "RNCryptor"
+pod "TrustKit"
+pod "KeychainAccess"
 end

@@ -38,8 +38,11 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - GTMSessionFetcher/Full (1.5.0):
     - GTMSessionFetcher/Core (= 1.5.0)
-  - lottie-ios (3.1.9)
+  - KeychainAccess (4.2.1)
+  - lottie-ios (3.2.1)
+  - RNCryptor (5.1.0)
   - SCLAlertView (0.8)
+  - TrustKit (1.7.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit/Swift
@@ -48,8 +51,11 @@ DEPENDENCIES:
   - FSCalendar
   - GoogleAPIClientForREST/Drive
   - GoogleSignIn
+  - KeychainAccess
   - lottie-ios
+  - RNCryptor
   - SCLAlertView
+  - TrustKit
 
 SPEC REPOS:
   trunk:
@@ -62,8 +68,11 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - KeychainAccess
     - lottie-ios
+    - RNCryptor
     - SCLAlertView
+    - TrustKit
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
@@ -75,9 +84,12 @@ SPEC CHECKSUMS:
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
-  lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
+  KeychainAccess: 9b07f665298d13c3a85881bd3171f6f49b8151c1
+  lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
+  RNCryptor: a369134686cd2ad391323cc856b62e591193ba79
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  TrustKit: dac38bb37e49bdfeca41b1a19d020da38017b51c
 
-PODFILE CHECKSUM: 3778270545c53efb95e51a2a646ec2cf32ec6a96
+PODFILE CHECKSUM: b93fc1e42a2207270dc4b66d9d08c58f57738bfd
 
 COCOAPODS: 1.10.0

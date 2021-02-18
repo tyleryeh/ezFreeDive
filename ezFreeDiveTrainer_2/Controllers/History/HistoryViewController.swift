@@ -131,7 +131,7 @@ extension HistoryViewController: UITableViewDataSource {
             cell.timeline.backColor = UIColor.black
             cell.timeline.frontColor = UIColor.black
         }
-
+        
         switch indexPath.section {
         case 0:
             guard let breath = self.data[indexPath.row].breath,
@@ -141,11 +141,10 @@ extension HistoryViewController: UITableViewDataSource {
             }
             cell.titleLabel.text = self.data[indexPath.row].tableName
             cell.descriptionLabel.text = "BreathTime: \(breath), HoldTime: \(hold), Set: \(set)"
-            if indexPath.row == 0 {
-                cell.illustrationImageView.image = UIImage(named: "wallclock")
-                cell.illustrationSize.constant = 40
-                cell.viewsInStackView = [UIImageView(image: UIImage(named: "wallclock"))]
-            }
+            cell.illustrationImageView.image = UIImage(named: "wallclock")
+            cell.illustrationSize.constant = 40
+            cell.viewsInStackView = [UIImageView(image: UIImage(named: "wallclock"))]
+            
             return cell
         case 1:
             

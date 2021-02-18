@@ -13,6 +13,7 @@
 		2F0A61B12591E39D0006BFE9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */; };
 		2F0A61B9259203740006BFE9 /* TrainingModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */; };
 		2F0A61BD25920E340006BFE9 /* TrainingModeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */; };
+		2F1DA76225DE5759007BCECF /* String+RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DA76125DE5759007BCECF /* String+RNCryptor.swift */; };
 		2F1DDE6D25A788F000FAC05E /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DDE6C25A788F000FAC05E /* UIImage+Resize.swift */; };
 		2F202A2625A551CB0093CD73 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F202A2525A551CB0093CD73 /* MoodViewController.swift */; };
 		2F202A2A25A55CBC0093CD73 /* MoodViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */; };
@@ -77,6 +78,7 @@
 		2F0A61B02591E39D0006BFE9 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		2F0A61B8259203740006BFE9 /* TrainingModeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeSelectViewController.swift; sourceTree = "<group>"; };
 		2F0A61BC25920E340006BFE9 /* TrainingModeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeCellTableViewCell.swift; sourceTree = "<group>"; };
+		2F1DA76125DE5759007BCECF /* String+RNCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RNCryptor.swift"; sourceTree = "<group>"; };
 		2F1DDE6C25A788F000FAC05E /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		2F202A2525A551CB0093CD73 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		2F202A2925A55CBC0093CD73 /* MoodViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		2FDFF69825979D630022C0F2 /* TableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
 		2FDFF69C2597C1780022C0F2 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		2FE429AD25ACA5F700C66503 /* thermometer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thermometer.json; sourceTree = "<group>"; };
+		2FF2EC8425D1723700E0C584 /* ezFreeDiveTrainer_2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ezFreeDiveTrainer_2.entitlements; sourceTree = "<group>"; };
 		2FF419FD25957CDE006B01AC /* ReduceStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStepViewController.swift; sourceTree = "<group>"; };
 		2FF41A0025957CF4006B01AC /* ReduceStepBreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStepBreathViewController.swift; sourceTree = "<group>"; };
 		2FF41A102595807B006B01AC /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -199,6 +202,7 @@
 				2F8A40F1259AE24E007274DD /* SubFunctions.swift */,
 				2F8A40FA259B04A3007274DD /* NotificationName.swift */,
 				2F9B575C25A4717200F527CC /* JsonDecode.swift */,
+				2F1DA76125DE5759007BCECF /* String+RNCryptor.swift */,
 				2F1DDE6C25A788F000FAC05E /* UIImage+Resize.swift */,
 			);
 			name = Extension;
@@ -268,6 +272,7 @@
 		2F435DC8258C4A8B00AB02B8 /* ezFreeDiveTrainer_2 */ = {
 			isa = PBXGroup;
 			children = (
+				2FF2EC8425D1723700E0C584 /* ezFreeDiveTrainer_2.entitlements */,
 				2F435DC9258C4A8B00AB02B8 /* AppDelegate.swift */,
 				2F435DCB258C4A8B00AB02B8 /* SceneDelegate.swift */,
 				2F435DCD258C4A8B00AB02B8 /* ViewController.swift */,
@@ -548,6 +553,7 @@
 				2F7049DF25A32A97007B7543 /* DiaryNoteSetViewController.swift in Sources */,
 				2FCFE48425CADCDA007FE8F9 /* Location+CoreDataProperties.swift in Sources */,
 				2FCFE48325CADCDA007FE8F9 /* Location+CoreDataClass.swift in Sources */,
+				2F1DA76225DE5759007BCECF /* String+RNCryptor.swift in Sources */,
 				2FF41A112595807B006B01AC /* CoreDataHelper.swift in Sources */,
 				2FCFE48625CADCDA007FE8F9 /* Diary+CoreDataProperties.swift in Sources */,
 				2F6C301D25ABE73100F8A123 /* EquipViewController.swift in Sources */,
@@ -731,6 +737,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ezFreeDiveTrainer_2/ezFreeDiveTrainer_2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97QUS33ART;
 				INFOPLIST_FILE = ezFreeDiveTrainer_2/Info.plist;
@@ -752,6 +759,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ezFreeDiveTrainer_2/ezFreeDiveTrainer_2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97QUS33ART;
 				INFOPLIST_FILE = ezFreeDiveTrainer_2/Info.plist;
