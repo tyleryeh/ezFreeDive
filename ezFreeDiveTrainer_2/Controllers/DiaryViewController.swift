@@ -139,6 +139,17 @@ extension DiaryViewController: UITableViewDelegate {
         }
         
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let rmdata = self.showData?.remove(at: indexPath.row)
+            let moc = CoreDataHelper.shared.managedObjectContext()
+            moc.performAndWait {
+                moc.delete(rmdata!)
+            }
+            CoreDataHelper.shared.saveContext()
+            self.myTableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 }
 
 extension DiaryViewController: UITableViewDataSource {

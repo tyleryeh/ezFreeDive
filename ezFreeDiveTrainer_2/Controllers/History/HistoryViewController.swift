@@ -87,6 +87,30 @@ extension HistoryViewController: UITableViewDelegate {
             print("Error section selected")
         }
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            switch indexPath.section {
+            case 0:
+                let rmdata = self.data.remove(at: indexPath.row)
+                let moc = CoreDataHelper.shared.managedObjectContext()
+                moc.performAndWait {
+                    moc.delete(rmdata)
+                }
+                CoreDataHelper.shared.saveContext()
+                self.myTableView.deleteRows(at: [indexPath], with: .automatic)
+            case 1:
+                let rmdata = self.diaryData?.remove(at: indexPath.row)
+                let moc = CoreDataHelper.shared.managedObjectContext()
+                moc.performAndWait {
+                    moc.delete(rmdata!)
+                }
+                CoreDataHelper.shared.saveContext()
+                self.myTableView.deleteRows(at: [indexPath], with: .automatic)
+            default:
+                print("Remove diaryData error")
+            }
+        }
+    }
 }
 
 extension HistoryViewController: UITableViewDataSource {
@@ -155,8 +179,6 @@ extension HistoryViewController: UITableViewDataSource {
                 cell.illustrationSize.constant = 36
                 
                 SubFunctions.shared.updateLabelForThings(label: cell.descriptionLabel, location: data.placeName ?? "", weather: "", temMax: data.placeTempMax ?? "", temMin: data.placeTempMin ?? "", moodemoji: data.moodName ?? "")
-                
-                
                 return cell
             } else {
                 return cell

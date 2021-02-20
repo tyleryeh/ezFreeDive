@@ -68,6 +68,17 @@ extension ReduceTimeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let rmdata = self.data.remove(at: indexPath.row)
+            let moc = CoreDataHelper.shared.managedObjectContext()
+            moc.performAndWait {
+                moc.delete(rmdata)
+            }
+            CoreDataHelper.shared.saveContext()
+            self.myTableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 }
 
 extension ReduceTimeViewController: UITableViewDataSource {
