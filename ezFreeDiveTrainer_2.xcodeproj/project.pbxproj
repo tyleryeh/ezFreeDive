@@ -33,6 +33,8 @@
 		2F435DFF258C85AB00AB02B8 /* FacebookLogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */; };
 		2F4C8E57259C5C5B00F551C8 /* DiaryAddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */; };
 		2F5F985325DECA3A0095487E /* Data+RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5F985225DECA3A0095487E /* Data+RNCryptor.swift */; };
+		2F69DE6A25E0DB9C00DAC1DF /* working.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F69DE6925E0DB9C00DAC1DF /* working.json */; };
+		2F69DE6D25E0DC2D00DAC1DF /* WorkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F69DE6C25E0DC2D00DAC1DF /* WorkingViewController.swift */; };
 		2F6C301D25ABE73100F8A123 /* EquipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6C301C25ABE73100F8A123 /* EquipViewController.swift */; };
 		2F7049DF25A32A97007B7543 /* DiaryNoteSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7049DE25A32A97007B7543 /* DiaryNoteSetViewController.swift */; };
 		2F79340F25A04B1E00D70772 /* RTCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79340E25A04B1E00D70772 /* RTCounterViewController.swift */; };
@@ -101,6 +103,8 @@
 		2F435DFE258C85AB00AB02B8 /* FacebookLogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacebookLogInManager.swift; path = LogIn/FacebookLogInManager.swift; sourceTree = "<group>"; };
 		2F4C8E56259C5C5B00F551C8 /* DiaryAddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddNoteViewController.swift; sourceTree = "<group>"; };
 		2F5F985225DECA3A0095487E /* Data+RNCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+RNCryptor.swift"; sourceTree = "<group>"; };
+		2F69DE6925E0DB9C00DAC1DF /* working.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = working.json; sourceTree = "<group>"; };
+		2F69DE6C25E0DC2D00DAC1DF /* WorkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingViewController.swift; sourceTree = "<group>"; };
 		2F6C301C25ABE73100F8A123 /* EquipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipViewController.swift; sourceTree = "<group>"; };
 		2F7049DE25A32A97007B7543 /* DiaryNoteSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryNoteSetViewController.swift; sourceTree = "<group>"; };
 		2F79340E25A04B1E00D70772 /* RTCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCounterViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 				2F435DCD258C4A8B00AB02B8 /* ViewController.swift */,
 				2FE429AD25ACA5F700C66503 /* thermometer.json */,
 				2FC400D625AD3673003B9405 /* clockLottie.json */,
+				2F69DE6925E0DB9C00DAC1DF /* working.json */,
 				2F435DF2258C5CF100AB02B8 /* orgbundID */,
 				2F435DCF258C4A8B00AB02B8 /* Main.storyboard */,
 				2FDFF69025979C5E0022C0F2 /* Model.xcdatamodeld */,
@@ -380,6 +385,7 @@
 		2FF41A212595820B006B01AC /* RS */ = {
 			isa = PBXGroup;
 			children = (
+				2F69DE6C25E0DC2D00DAC1DF /* WorkingViewController.swift */,
 				2FF419FD25957CDE006B01AC /* ReduceStepViewController.swift */,
 				2FF41A19259581BD006B01AC /* RSTimerViewController.swift */,
 			);
@@ -469,6 +475,7 @@
 				2F79342825A1B55800D70772 /* TimelineTableViewCell.xib in Resources */,
 				2F435DD1258C4A8B00AB02B8 /* Main.storyboard in Resources */,
 				2FE429AE25ACA5F700C66503 /* thermometer.json in Resources */,
+				2F69DE6A25E0DB9C00DAC1DF /* working.json in Resources */,
 				2F435DF3258C5CF100AB02B8 /* orgbundID in Resources */,
 				2FC400D725AD3673003B9405 /* clockLottie.json in Resources */,
 			);
@@ -542,6 +549,7 @@
 			files = (
 				2F79340F25A04B1E00D70772 /* RTCounterViewController.swift in Sources */,
 				2F2346172599CD8500A6B5AB /* ReduceTimeCellTableViewCell.swift in Sources */,
+				2F69DE6D25E0DC2D00DAC1DF /* WorkingViewController.swift in Sources */,
 				2F202A2A25A55CBC0093CD73 /* MoodViewCollectionViewCell.swift in Sources */,
 				2F435DCE258C4A8B00AB02B8 /* ViewController.swift in Sources */,
 				2F79341225A04B9800D70772 /* CircleUIView.swift in Sources */,

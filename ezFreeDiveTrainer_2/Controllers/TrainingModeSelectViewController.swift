@@ -49,14 +49,14 @@ extension TrainingModeSelectViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TrainingModeCellTableViewCell
             cell.backgroundColor = UIColor.clear
             cell.modeTital.text = "Timer Training"
-            cell.modeDescryption.text = "You can set your table just......"
+            cell.modeDescryption.text = "Build up your personal co2 table."
             cell.modeImageView.image = UIImage(named: "wallclock")
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TrainingModeCellTableViewCell
             cell.backgroundColor = UIColor.clear
             cell.modeTital.text = "Step Training"
-            cell.modeDescryption.text = "You can set your table just......"
+            cell.modeDescryption.text = "Build up your personal co2 table of dynamic training."
             cell.modeImageView.image = UIImage(named: "footprints")
             
             SubFunctions.shared.drawGradual(image: cell.modeImageView, arcCenterMustBeSquareViewXY: cell.modeImageView.bounds.width / 2, radius: cell.modeImageView.bounds.width / 2, color1: "#29323c", color2: "#29323c", lineWidth: 4.0)
@@ -184,7 +184,10 @@ extension TrainingModeSelectViewController: UITableViewDataSource {
         }
     }
     func reduceTimeBreath() {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "ReduceTimeBreath") {
+//        if let controller = storyboard?.instantiateViewController(withIdentifier: "ReduceTimeBreath") {
+//            show(controller, sender: nil)
+//        }
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "workingVC") {
             show(controller, sender: nil)
         }
     }

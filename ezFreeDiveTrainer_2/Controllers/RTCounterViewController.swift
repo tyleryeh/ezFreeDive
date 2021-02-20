@@ -58,7 +58,6 @@ class RTCounterViewController: UIViewController {
     @objc func didFinishTimer() {
         if flowControlCount < circleBreath.count * 2 {
             flowControlCount += 1
-            //吐字串
             guard let interval = valueReset(index: flowControlCount) else {
                 return
             }
@@ -68,6 +67,7 @@ class RTCounterViewController: UIViewController {
             myCircleView.addAnimation(interval: interval)
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(upDateCircle), userInfo: nil, repeats: true)
         } else {
+            tableViewTextChangeColor(state: "over", counter: circleBreath.count - 1)
             flowControlCount = 0
             holdArrayCounter = 0
             breathArrayCounter = 0
@@ -80,12 +80,14 @@ class RTCounterViewController: UIViewController {
             //Hold side
             print("holdC : \(holdArrayCounter)")
             let interval = Double(circleHold[holdArrayCounter])
+            tableViewTextChangeColor(state: "hold", counter: holdArrayCounter)
             holdArrayCounter += 1
             return interval
         } else {
             //Breath side
             breathArrayCounter += 1
             print("breathC : \(breathArrayCounter)")
+            tableViewTextChangeColor(state: "breath", counter: breathArrayCounter)
             let interval = Double(circleBreath[breathArrayCounter])
             return interval
         }
@@ -102,14 +104,40 @@ class RTCounterViewController: UIViewController {
         
         myCircleView.addAnimation(interval: circleBreath[0]) //只能執行一次，跟變數一樣
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(upDateCircle), userInfo: nil, repeats: true)
+        tableViewTextChangeColor(state: "breath", counter: 0)
         flowControlCount = 0
         flowControlCount += 1
+    }
+    
+    func tableViewTextChangeColor(state: String, counter: Int) {
+        let cell = self.myTableView.cellForRow(at: IndexPath(row: counter, section: 0)) as! RTCellTableViewCell
+        cell.breathtime.textColor = UIColor.label
+        cell.holdtime.textColor = UIColor.label
+        
+        if counter != 0 {
+            let cell = self.myTableView.cellForRow(at: IndexPath(row: counter - 1, section: 0)) as! RTCellTableViewCell
+            cell.breathtime.textColor = UIColor.label
+            cell.holdtime.textColor = UIColor.label
+        }
+        
+        switch state {
+        case "breath":
+            cell.breathtime.textColor = .yellow
+        case "hold":
+            cell.holdtime.textColor = .yellow
+        case "over":
+            cell.breathtime.textColor = UIColor.label
+            cell.holdtime.textColor = UIColor.label
+        default:
+            print("Input error")
+        }
+
     }
     
     @objc func upDateCircle() {
         textUpdate()
     }
-    //timer會一直呼叫
+    //timer call function
     func textUpdate() {
         if duration < 1 {
             //Stop timer

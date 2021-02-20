@@ -396,6 +396,53 @@
             </objects>
             <point key="canvasLocation" x="6617" y="97"/>
         </scene>
+        <!--Working View Controller-->
+        <scene sceneID="A0B-JA-NnH">
+            <objects>
+                <viewController storyboardIdentifier="workingVC" id="2BW-hQ-vc6" customClass="WorkingViewController" customModule="ezFreeDiveTrainer_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Hk-G7-dJW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Still working" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-dm-DOn">
+                                <rect key="frame" x="118" y="389.5" width="139" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kaO-dm-DOn" secondAttribute="height" multiplier="139:34" id="Gf8-q7-cJ2"/>
+                                    <constraint firstAttribute="height" constant="34" id="JcU-ao-rPX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="139" id="gON-DS-Uy9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwo-Af-1S6" customClass="LottieView" customModule="Lottie">
+                                <rect key="frame" x="87" y="174" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="UFy-mQ-Blf"/>
+                                    <constraint firstAttribute="height" constant="200" id="byY-xk-Wwn"/>
+                                    <constraint firstAttribute="width" secondItem="xwo-Af-1S6" secondAttribute="height" multiplier="1:1" id="snL-VQ-1vg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YAa-4G-fBa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kaO-dm-DOn" firstAttribute="top" secondItem="xwo-Af-1S6" secondAttribute="bottom" constant="16" id="ADo-7J-R37"/>
+                            <constraint firstItem="kaO-dm-DOn" firstAttribute="leading" secondItem="YAa-4G-fBa" secondAttribute="leading" constant="118" id="Ukj-IK-Pb5"/>
+                            <constraint firstItem="YAa-4G-fBa" firstAttribute="trailing" secondItem="kaO-dm-DOn" secondAttribute="trailing" constant="118" id="aEu-cg-WzP"/>
+                            <constraint firstItem="xwo-Af-1S6" firstAttribute="centerY" secondItem="3Hk-G7-dJW" secondAttribute="centerY" constant="-60" id="hsr-8e-cuR"/>
+                            <constraint firstItem="xwo-Af-1S6" firstAttribute="centerX" secondItem="3Hk-G7-dJW" secondAttribute="centerX" id="rj4-tc-2nC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="workLottieView" destination="xwo-Af-1S6" id="mX1-OD-zuw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iav-N0-oZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6616.8000000000002" y="1879.610194902549"/>
+        </scene>
         <!--Reduce Time View Controller-->
         <scene sceneID="e4X-U0-jjC">
             <objects>
@@ -1919,10 +1966,9 @@
                                         </constraints>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="儲存">
+                                                <fragment content="Save">
                                                     <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <font key="NSOriginalFont" metaFont="system" size="15"/>
+                                                        <font key="NSFont" size="15" name="ChalkboardSE-Regular"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -1946,10 +1992,9 @@
                                         </constraints>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="取消">
+                                                <fragment content="Cancel">
                                                     <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <font key="NSOriginalFont" metaFont="system" size="15"/>
+                                                        <font key="NSFont" size="15" name="ChalkboardSE-Regular"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -2008,14 +2053,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAl-dg-E01">
-                                <rect key="frame" x="233" y="159" width="126" height="30"/>
+                                <rect key="frame" x="233" y="159" width="126" height="33"/>
                                 <color key="backgroundColor" cyan="0.3242990154" magenta="0.0001772865653" yellow="0.0" black="0.0" alpha="0.84705882349999995" colorSpace="deviceCMYK"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="設定">
+                                        <fragment content="Set">
                                             <attributes>
-                                                <font key="NSFont" metaFont="system" size="15"/>
-                                                <font key="NSOriginalFont" metaFont="system" size="15"/>
+                                                <font key="NSFont" size="15" name="ChalkboardSE-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
