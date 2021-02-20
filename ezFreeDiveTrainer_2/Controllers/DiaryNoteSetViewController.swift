@@ -52,6 +52,8 @@ class DiaryNoteSetViewController: UIViewController {
         myInnerView.backgroundColor = UIColor.clear
         myTextView.backgroundColor = UIColor.clear
         myTextView.text = "Have a nice dive 🐋"
+        myTextView.delegate = self
+        addDoneButtonOnKeyboard_textView(textView: myTextView)
         
         screenSize = UIScreen.main.bounds
         
@@ -247,6 +249,28 @@ class DiaryNoteSetViewController: UIViewController {
         label.attributedText = content
     }
     
+    func addDoneButtonOnKeyboard_textView(textView: UITextView) {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle = UIBarStyle.default
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(textViewResignFirst))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        textView.inputAccessoryView = doneToolbar
+    }
+    @objc func textViewResignFirst() {
+        textViewResign(textView: self.myTextView)
+    }
+    func textViewResign(textView: UITextView) {
+        textView.resignFirstResponder()
+    }
+    
     // MARK: - Navigation
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "diveSiteSegue" {
@@ -261,6 +285,10 @@ extension DiaryNoteSetViewController: UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let arry = self.diaryData else {return}
         arry[0].diaryName = textField.text
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
@@ -429,4 +457,14 @@ extension DiaryNoteSetViewController: MoodViewControllerDelegate, WeatherViewCon
         //CoreData 去done那邊存，要更改潛水地點在存
     }
     
+}
+
+extension DiaryNoteSetViewController: UITextViewDelegate{
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//        if(text == "\n") {
+//            textView.resignFirstResponder()
+//            return false
+//        }
+//        return true
+//    }
 }

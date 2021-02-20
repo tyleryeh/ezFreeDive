@@ -11,6 +11,7 @@ import AuthenticationServices
 import KeychainAccess
 import TrustKit
 import SCLAlertView
+import SafariServices
 
 class AccountViewController: UIViewController {
     
@@ -59,7 +60,8 @@ class AccountViewController: UIViewController {
         view.addSubview(signInButton)
         signInButton.addTarget(self, action: #selector(appleLogInTap), for: .touchUpInside)
         
-        view.addGestureRecognizer(photoGesture())
+        self.accountImageView.isUserInteractionEnabled = true
+        self.accountImageView.addGestureRecognizer(photoGesture())
         
     }
     
@@ -273,12 +275,19 @@ extension AccountViewController: UINavigationControllerDelegate, MFMailComposeVi
     }
 }
 
-extension AccountViewController: UITableViewDelegate {
+extension AccountViewController: UITableViewDelegate, SFSafariViewControllerDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 1 {
             sendEmail()
         } else if indexPath.row == 2 {
+            let url = URL(string: "https://www.privacypolicies.com/live/af471e09-630b-4a63-ba63-6a3dd56ccb8d")!
+            let safariVC = SFSafariViewController(url: url)
+            safariVC.preferredBarTintColor = .black
+            safariVC.preferredControlTintColor = .white
+            safariVC.dismissButtonStyle = .close
+            safariVC.delegate = self
+            self.present(safariVC, animated: true, completion: nil)
             
         } else if indexPath.row == 3 {
 
