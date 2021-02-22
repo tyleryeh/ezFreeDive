@@ -328,6 +328,18 @@ extension DiaryNoteSetViewController: UICollectionViewDataSource {
     }
     //相機
     @objc func cameraBtn() {
+        let appearance = SCLAlertView.SCLAppearance(
+            kCircleIconHeight: 30,
+            kTitleFont: UIFont(name: "Chalkboard SE Regular", size: 22)!,
+            kTextFont: UIFont(name: "Chalkboard SE Regular", size: 12)!,
+            kButtonFont: UIFont(name: "Chalkboard SE Regular", size: 14)!,
+            contentViewCornerRadius: 20
+        )
+        
+        let alertView = SCLAlertView(appearance: appearance)
+        alertView.view.backgroundColor = UIColor.clear
+        
+        alertView.showSuccess("Sorry", subTitle: "Still working on it🧑‍💻", closeButtonTitle: "Ok", circleIconImage: #imageLiteral(resourceName: "cat-face"))
         print("cameraBtn")
     }
     //裝備

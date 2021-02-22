@@ -404,19 +404,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Still working" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-dm-DOn">
-                                <rect key="frame" x="118" y="389.5" width="139" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="kaO-dm-DOn" secondAttribute="height" multiplier="139:34" id="Gf8-q7-cJ2"/>
-                                    <constraint firstAttribute="height" constant="34" id="JcU-ao-rPX"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="139" id="gON-DS-Uy9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwo-Af-1S6" customClass="LottieView" customModule="Lottie">
-                                <rect key="frame" x="87" y="174" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="173.5" width="200" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="UFy-mQ-Blf"/>
@@ -424,13 +413,19 @@
                                     <constraint firstAttribute="width" secondItem="xwo-Af-1S6" secondAttribute="height" multiplier="1:1" id="snL-VQ-1vg"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Still working on it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-dm-DOn">
+                                <rect key="frame" x="87" y="389.5" width="201" height="34"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YAa-4G-fBa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kaO-dm-DOn" firstAttribute="top" secondItem="xwo-Af-1S6" secondAttribute="bottom" constant="16" id="ADo-7J-R37"/>
-                            <constraint firstItem="kaO-dm-DOn" firstAttribute="leading" secondItem="YAa-4G-fBa" secondAttribute="leading" constant="118" id="Ukj-IK-Pb5"/>
-                            <constraint firstItem="YAa-4G-fBa" firstAttribute="trailing" secondItem="kaO-dm-DOn" secondAttribute="trailing" constant="118" id="aEu-cg-WzP"/>
+                            <constraint firstItem="kaO-dm-DOn" firstAttribute="top" secondItem="xwo-Af-1S6" secondAttribute="bottom" constant="16" id="1LV-NI-CIl"/>
+                            <constraint firstItem="YAa-4G-fBa" firstAttribute="trailing" secondItem="kaO-dm-DOn" secondAttribute="trailing" constant="87" id="1UH-fn-fk1"/>
+                            <constraint firstItem="kaO-dm-DOn" firstAttribute="leading" secondItem="YAa-4G-fBa" secondAttribute="leading" constant="87" id="TdG-O4-mSw"/>
                             <constraint firstItem="xwo-Af-1S6" firstAttribute="centerY" secondItem="3Hk-G7-dJW" secondAttribute="centerY" constant="-60" id="hsr-8e-cuR"/>
                             <constraint firstItem="xwo-Af-1S6" firstAttribute="centerX" secondItem="3Hk-G7-dJW" secondAttribute="centerX" id="rj4-tc-2nC"/>
                         </constraints>
