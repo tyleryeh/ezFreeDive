@@ -24,50 +24,6 @@
             </objects>
             <point key="canvasLocation" x="-1319" y="638"/>
         </scene>
-        <!--Log In View Controller-->
-        <scene sceneID="tP1-qg-boA">
-            <objects>
-                <viewController id="NUj-np-qOs" customClass="LogInViewController" customModule="ezFreeDiveTrainer_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fxm-6c-YKY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oS-8n-hrO">
-                                <rect key="frame" x="16" y="218" width="343" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="GoogleLogIn"/>
-                                <connections>
-                                    <action selector="googleSignBtn:" destination="NUj-np-qOs" eventType="touchUpInside" id="o0X-Yi-m0H"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmD-mn-cBD">
-                                <rect key="frame" x="16" y="313" width="343" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="GoogleLogOut"/>
-                                <connections>
-                                    <action selector="googleLogOutBtn:" destination="NUj-np-qOs" eventType="touchUpInside" id="lqO-CE-0z9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-1w-feR" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="16" y="431" width="343" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="facebookLogIn"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="gsQ-3L-2i8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="facebookSignIn" destination="rqc-1w-feR" id="wTs-vb-oOP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVb-hL-af3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="503" y="581"/>
-        </scene>
         <!--Account View Controller-->
         <scene sceneID="AOD-vL-Qjm">
             <objects>

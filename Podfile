@@ -6,11 +6,11 @@ target 'ezFreeDiveTrainer_2' do
   use_frameworks!
 
   # Pods for ezFreeDiveTrainer_2
-pod "GoogleAPIClientForREST/Drive"
-pod "GoogleSignIn"
-pod "FBSDKCoreKit/Swift"
-pod "FBSDKLoginKit"
-pod "FBSDKShareKit"
+#pod "GoogleAPIClientForREST/Drive"
+#pod "GoogleSignIn"
+#pod "FBSDKCoreKit/Swift"
+#pod "FBSDKLoginKit"
+#pod "FBSDKShareKit"
 pod 'FSCalendar'
 pod 'SCLAlertView'
 pod 'lottie-ios'
