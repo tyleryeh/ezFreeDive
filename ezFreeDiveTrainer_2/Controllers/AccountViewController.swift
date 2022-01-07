@@ -22,7 +22,7 @@ class AccountViewController: UIViewController {
     
     var cellText = ["Version", "Report", "Privacy Policy"]
     var version = ""
-    //要都出上面那組masterKey.....
+    //要兜出上面那組masterKey.....
     var masterKey: String {
         var result = ""
         result += String(10 * 7 + 7)
@@ -48,14 +48,11 @@ class AccountViewController: UIViewController {
         myTableView.backgroundColor = UIColor.clear
         
         accountImageView.backgroundColor = UIColor.clear
-        //可改成用dic的方式存[didSelectedPhoto: true]
-//        if UserDefaults.standard.bool(forKey: "didSelectedPhoto") == nil {
-//        }
+
         SubFunctions.shared.imageSet(image: accountImageView, name: "cat-face", c1: "#37ecba", c2: "#72afd3", lineWidth: 5.0)
         
         let dictionary = Bundle.main.infoDictionary!
         version = dictionary["CFBundleShortVersionString"] as! String
-        print("\(version)")
         
         view.addSubview(signInButton)
         signInButton.addTarget(self, action: #selector(appleLogInTap), for: .touchUpInside)
@@ -73,6 +70,7 @@ class AccountViewController: UIViewController {
         gesTure.numberOfTouchesRequired = 1
         return gesTure
     }
+    
     @objc func selecPhoto() {
         let picker = UIImagePickerController()
         picker.sourceType = .savedPhotosAlbum
@@ -83,12 +81,17 @@ class AccountViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //Load userInformation
-        if UserDefaults.standard.bool(forKey: "didLogIn") == true {
-            nameLabel.text = loadFromKeychain(service: UserInformation.UserInfo.rawValue, masterKey: masterKey)
+        if let name = loadFromKeychain(service: UserInformation.UserInfo.rawValue, masterKey: masterKey) {
+            nameLabel.text = name
+        } else {
+            nameLabel.text = ""
         }
-        if UserDefaults.standard.bool(forKey: "didSelectedPhoto") == true {
-            decryptFile()
-        }
+        
+        decryptFile()
+        
+//        if UserDefaults.standard.bool(forKey: "didSelectedPhoto") == true {
+//            decryptFile()
+//        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -101,140 +104,24 @@ class AccountViewController: UIViewController {
     }
     
     @objc func appleLogInTap() {
-        if UserDefaults.standard.bool(forKey: "didLogIn") == true {
-            //show alert aleardy login
-            let appearance = SCLAlertView.SCLAppearance(
-                kCircleIconHeight: 30,
-                kTitleFont: UIFont(name: "Chalkboard SE Regular", size: 22)!,
-                kTextFont: UIFont(name: "Chalkboard SE Regular", size: 12)!,
-                kButtonFont: UIFont(name: "Chalkboard SE Regular", size: 14)!,
-                contentViewCornerRadius: 20
-            )
-            
-            let alertView = SCLAlertView(appearance: appearance)
-            alertView.view.backgroundColor = UIColor.clear
-            alertView.showSuccess("You have logged in.", subTitle: "🌟", closeButtonTitle: "Ok", circleIconImage: #imageLiteral(resourceName: "cat-face"))
-            
+        
+        if checkUserLogInData() == false {
+            requestLogIn()
         } else {
-            let provider = ASAuthorizationAppleIDProvider()
-            let request = provider.createRequest()
-            request.requestedScopes = [.fullName, .email]
-            
-            let controller = ASAuthorizationController(authorizationRequests: [request])
-            controller.delegate = self
-            controller.presentationContextProvider = self
-            controller.performRequests()
+            showDidLogInAlertView()
         }
         
     }
     
-    func sendEmail() {
-        if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(["tylersoooong79@hotmail.com.tw"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-            mail.setEditing(true, animated: true)
-            mail.setSubject("🌟 ezFreeDiveTrainer")
-            present(mail, animated: true)
-        } else {
-            // show failure alert
-        }
-    }
-    
-    func saveToKeychain(token: Data, userName: String?, service: String, masterKey: String) {
-        let tokenStr = String(decoding: token, as: UTF8.self)
-        guard let encryptedToken = tokenStr.encryptedToBase64(key: masterKey) else {
-            assertionFailure("Fail to encrypt token.")
-            return
-        }
-        print("token: \(token) ==> \(encryptedToken)")
-        
-        //寫入keychain
-        let keychain = Keychain(service: service)
-        keychain["encryptedToken"] = encryptedToken
-        //預設是String
-        keychain["userName"] = userName
-        //Data格式
-//        keychain[data: "secretKey"] = Data([0x00, 0x01, 0x02])
-    }
-    
-    func loadFromKeychain(service: String, masterKey: String) -> String? {
-        let keychain = Keychain(service: service)
-        guard let name = keychain["userName"] else {
-            print("login is not valid")
-            return "Please Log in with Apple ID."
-        }
-        return name
-        
-        //token
-//        guard let encryptedToken = keychain["encryptedToken"],
-//              let decryptedToken = try? encryptedToken.decryptedFromBase64(key: masterKey) else {
-//            print("encryptedToken is not valid")
-//            return
-//        }
-//        print("encryptedToken: \(encryptedToken)")
-//        print("encryptedToken: \(encryptedToken) ==> \(decryptedToken)")
-        
-        //Clean Value Only
-//        keychain["login"] = nil
-        
-        //Remove the whole key-value pair.
-//        try? keychain.remove("login")
-        
-        //Remove all.
-//        try? keychain.removeAll()
-  
-    }
-    
-    func encryptFile(image: UIImage) {
-        //從bundle把圖撈進來
-        guard let data = image.jpegData(compressionQuality: 0.5) else {
-            assertionFailure("Fail to load image data from file.")
-            return
-        }
-        let targetURL = FileManager.default.temporaryDirectory.appendingPathComponent("output.x")
-        
-        //完成加密
-        try? data.encrypt(to: targetURL, key: masterKey)
-        
-    }
-    
-    func decryptFile() {
-        let sourceURL = FileManager.default.temporaryDirectory.appendingPathComponent("output.x")
-        guard let data = try? Data.decrypt(from: sourceURL, key: masterKey) else {
-            assertionFailure("Fail to decrypt file")
-            return
-        }
-        accountImageView.image = UIImage(data: data)
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+//MARK: Apple Login
 extension AccountViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("Fail")
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-//        if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
-//            let fullName = credential.fullName
-//            let appleEmail = credential.email
-//            nameLabel.text = String(describing: fullName)
-//            emailLabel.text = String(describing: appleEmail)
-//            print("\(String(describing: fullName))")
-//            print("\(String(describing: appleEmail))")
-//        }
         
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let userToken = credential.identityToken,
@@ -265,16 +152,16 @@ extension AccountViewController: ASAuthorizationControllerPresentationContextPro
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return view.window!
     }
-    
-    
 }
 
+//MARK: Email
 extension AccountViewController: UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
 }
 
+//MARK: TableView
 extension AccountViewController: UITableViewDelegate, SFSafariViewControllerDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -322,6 +209,7 @@ extension AccountViewController: UITableViewDataSource {
     
 }
 
+//MARK: ImagePicker
 extension AccountViewController: UIImagePickerControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
@@ -329,6 +217,110 @@ extension AccountViewController: UIImagePickerControllerDelegate{
         UserDefaults.standard.setValue(true, forKey: "didSelectedPhoto")
         self.accountImageView.image = image
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+//MARK: Functions
+extension AccountViewController {
+    //寄信
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["tylersoooong79@hotmail.com.tw"])
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            mail.setEditing(true, animated: true)
+            mail.setSubject("🌟 ezFreeDiveTrainer")
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
+    
+    //存登入後資料到Keychain
+    func saveToKeychain(token: Data, userName: String?, service: String, masterKey: String) {
+        let tokenStr = String(decoding: token, as: UTF8.self)
+        guard let encryptedToken = tokenStr.encryptedToBase64(key: masterKey) else {
+            assertionFailure("Fail to encrypt token.")
+            return
+        }
+        print("token: \(token) ==> \(encryptedToken)")
+        
+        //寫入keychain
+        let keychain = Keychain(service: service)
+        keychain["encryptedToken"] = encryptedToken
+        //預設是String
+        keychain["userName"] = userName
+        //Data格式
+//        keychain[data: "secretKey"] = Data([0x00, 0x01, 0x02])
+    }
+    
+    //讀Keychain資料
+    func loadFromKeychain(service: String, masterKey: String) -> String? {
+        let keychain = Keychain(service: service)
+        guard let name = keychain["userName"] else {
+            print("login is not valid")
+            return "Please Log in with Apple ID."
+        }
+        return name
+  
+    }
+    
+    //加密使用者圖片
+    func encryptFile(image: UIImage) {
+        //從bundle把圖撈進來
+        guard let data = image.jpegData(compressionQuality: 0.5) else {
+            assertionFailure("Fail to load image data from file.")
+            return
+        }
+        let targetURL = FileManager.default.temporaryDirectory.appendingPathComponent("output.x")
+        
+        //完成加密
+        try? data.encrypt(to: targetURL, key: masterKey)
+        
+    }
+    
+    //解密使用者圖片
+    func decryptFile() {
+        let sourceURL = FileManager.default.temporaryDirectory.appendingPathComponent("output.x")
+        do {
+            let data = try Data.decrypt(from: sourceURL, key: masterKey)
+            accountImageView.image = UIImage(data: data)
+        } catch {
+           print("User no select data error: \(error)")
+        }
+    }
+    
+    //檢查使用者有沒有登入
+    func checkUserLogInData() -> Bool {
+        return loadFromKeychain(service: UserInformation.UserInfo.rawValue, masterKey: masterKey) == nil ? false: true
+    }
+    
+    //請求登入
+    func requestLogIn() {
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
+    }
+    
+    //顯示已登入警告視窗
+    func showDidLogInAlertView() {
+        let appearance = SCLAlertView.SCLAppearance(
+            kCircleIconHeight: 30,
+            kTitleFont: UIFont(name: "Chalkboard SE Regular", size: 22)!,
+            kTextFont: UIFont(name: "Chalkboard SE Regular", size: 12)!,
+            kButtonFont: UIFont(name: "Chalkboard SE Regular", size: 14)!,
+            contentViewCornerRadius: 20
+        )
+        
+        let alertView = SCLAlertView(appearance: appearance)
+        alertView.view.backgroundColor = UIColor.clear
+        alertView.showSuccess("You have logged in.", subTitle: "🌟", closeButtonTitle: "Ok", circleIconImage: #imageLiteral(resourceName: "cat-face"))
     }
 }
 

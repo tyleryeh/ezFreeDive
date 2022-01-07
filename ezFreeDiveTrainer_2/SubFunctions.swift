@@ -174,12 +174,12 @@ class SubFunctions {
         image.layer.addSublayer(gradient)
     }
     //圓形 + 漸層編框
-        func imageSet(image: UIImageView, name: String, c1: String, c2: String, lineWidth: CGFloat) {
-            image.layer.cornerRadius = image.frame.size.width / 2
-            image.clipsToBounds = true
-            image.image = UIImage(named: name)
-            
-            SubFunctions.shared.drawGradual(image: image, arcCenterMustBeSquareViewXY: image.bounds.width / 2, radius: image.bounds.width / 2, color1: c1, color2: c2, lineWidth: lineWidth)
-        }
+    func imageSet(image: UIImageView, name: String, c1: String, c2: String, lineWidth: CGFloat) {
+        image.layer.cornerRadius = image.frame.size.width / 2
+        image.clipsToBounds = true
+        image.image = UIImage(named: name)
+        
+        SubFunctions.shared.drawGradual(image: image, arcCenterMustBeSquareViewXY: image.bounds.width / 2, radius: image.bounds.width / 2, color1: c1, color2: c2, lineWidth: lineWidth)
+    }
     
 }
